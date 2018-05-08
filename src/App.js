@@ -12,6 +12,9 @@ class App extends Component {
           <h2>
             Find recipes based on the ingredients in your fridge!
           </h2>
+          <h3>
+            Get started now!
+          </h3>
         </header>
       </div>
     );
