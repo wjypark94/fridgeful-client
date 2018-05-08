@@ -1,13 +1,14 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import './landing-page.css';
 
+import LoginButton from './login-button';
+import SignUpButton from './sign-up-button';
 
 export default function LandingPage(){
     return(
-        <div className="signup">
-            <button> SignUp </button>
-            <button><Link to='/dashboard'>Login</Link> </button>
+        <div className="signlog-buttons">
+            <SignUpButton/>
+            <LoginButton/>
         </div>
     )
 }
