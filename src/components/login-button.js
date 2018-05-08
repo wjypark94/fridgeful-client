@@ -1,9 +1,11 @@
 import React from 'react';
 
-import {BrowserRouter as Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
 export default function LoginButton(){
     return(
-        <button><Link to='/dashboard'>LogIn</Link></button>
+        <Router>
+            <button><Link to='/login-form'>LogIn</Link></button>
+        </Router>
     );
 }

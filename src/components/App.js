@@ -1,13 +1,12 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import Dashboard from './dashboard';
 import LandingPage from './landing-page';
 import SignUpForm from './sign-up-form';
-
+import LoginForm from './login-form';
 
 export default function App(props) {
-  //render() {
     return (
       <Router>
         <div className='app'>
@@ -18,11 +17,11 @@ export default function App(props) {
             <Route exact path='/' component={LandingPage}/>
             <Route exact path='/dashboard' component={Dashboard}/>
             <Route exact path='/sign-up-form' component={SignUpForm}/>
+            <Route exact path='/login-form' component={LoginForm}/>
           </main>
         </div>
       </Router>
     );
-  //}
 }
 
-//export default App;
+
