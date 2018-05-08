@@ -13,7 +13,7 @@ class App extends Component {
             Find recipes based on the ingredients in your fridge!
           </h2>
           <h3>
-            Get started now!
+            Get started now! Find recipes!
           </h3>
         </header>
       </div>
