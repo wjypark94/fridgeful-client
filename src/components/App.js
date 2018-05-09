@@ -5,13 +5,14 @@ import Dashboard from './dashboard';
 import LandingPage from './landing-page';
 import SignUpForm from './sign-up-form';
 import LoginForm from './login-form';
+import {Link} from 'react-router-dom';
 
 export default function App(props) {
     return (
       <Router>
         <div className='app'>
           <header>
-            <h1> Fridgeful </h1>
+            <h1><Link to='/' className="home-title"> Fridgeful </Link></h1>
           </header>
           <main>
             <Route exact path='/' component={LandingPage}/>
