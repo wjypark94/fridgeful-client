@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Dashboard from './dashboard';
 import LandingPage from './landing-page';
 import SignUpForm from './sign-up-form';
@@ -23,5 +23,4 @@ export default function App(props) {
       </Router>
     );
 }
-
 
