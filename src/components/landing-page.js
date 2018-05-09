@@ -1,5 +1,5 @@
 import React from 'react';
-import './landing-page.css';
+import '../componentStyles/landing-page.css';
 
 
 import LoginButton from './login-button';

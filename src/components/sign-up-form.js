@@ -1,5 +1,5 @@
 import React from 'react';
-import './sign-up-form.css';
+import '../componentStyles/sign-up-form.css';
 
 const {API_BASE_URL} = require('../config');
 
