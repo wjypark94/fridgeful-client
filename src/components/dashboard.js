@@ -5,7 +5,7 @@ import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import { Link } from 'react-router-dom';
 import DashboardInfo from './dashboard-info';
-import '../componentStyles/Dashboard.css';
+import '../componentStyles/dashboard.css';
 
 
 
