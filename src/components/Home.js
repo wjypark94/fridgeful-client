@@ -21,11 +21,11 @@ class Home extends Component{
                     <Header/>
                   
                     <div className="container">
-                        <a href="#display-cards" className="arrow down">Down</a>
+                        <a href="#about-section" className="arrow down">Down</a>
                     </div>
                 </div>
 
-                <div id="display-cards" className="instructions-display">
+                <div id="about-section" className="instructions-display">
                     <AboutSection/>
                 </div>
             </div>

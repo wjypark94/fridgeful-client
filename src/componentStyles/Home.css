@@ -1,0 +1,34 @@
+* { 
+    box-sizing: border-box;
+}
+
+.main-display{
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    min-height: 400px;
+}
+
+.instructions-display{
+    background-color: white;
+}
+
+.container{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+
+.arrow{
+    display: block;
+    border-color: transparent;
+    border-style: solid;
+    height: 0;
+    margin: 20em auto;
+    opacity: 0.8;
+    text-align: center;
+    color: black;
+  
+}
+

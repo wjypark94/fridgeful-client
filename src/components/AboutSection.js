@@ -1,5 +1,6 @@
 import React from 'react';
 import '../componentStyles/AboutSection.css';
+import '../componentStyles/float-grid.css';
 
 const AboutSection = (props) => {
     return (
