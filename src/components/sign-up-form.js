@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
-import RaisedButton from 'material-ui/RaisedButton';
+import MenuItem from 'material-ui/MenuItem'
+import '../componentStyles/sign-up-form.css';
 
 class RegistrationForm extends Component {
   constructor(props) {
@@ -45,9 +46,9 @@ class RegistrationForm extends Component {
 
     return (
       <div style={{display: `block`}}>
-        <RaisedButton className="reg-button" label="Register" onClick={this.handleOpen} />
+        <MenuItem id="register" onClick={this.handleOpen}>Register</MenuItem>
         <Dialog
-            title="Registration"
+            title="Sign Up"
             modal={true}
             open={this.state.open}
             autoScrollBodyContent={true}

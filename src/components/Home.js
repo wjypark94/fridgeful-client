@@ -6,6 +6,7 @@ import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import { Link } from 'react-router-dom';
+import RegistrationForm from './sign-up-form';
 
 class Home extends Component{ 
     constructor(props){
@@ -38,7 +39,7 @@ class Home extends Component{
                       <AppBar title="Fridgeful" style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19)', backgroundColor: 'dimgrey'}} />
 
                       <MenuItem containerElement={<Link to="/login-form" />} id="login">Log In</MenuItem>
-                      <MenuItem containerElement={<Link to="/sign-up-form" />} id="register">Register</MenuItem>
+                      <RegistrationForm/>
                   </Drawer>
                   
                     <div className="container">
