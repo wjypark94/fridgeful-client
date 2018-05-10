@@ -1,1 +1,6 @@
-import {createStore} from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+
+import thunk from 'redux-thunk';
+
+
+export default store;

@@ -1,64 +1,68 @@
-import React from 'react';
-import '../componentStyles/sign-up-form.css';
+import React, { Component } from 'react';
 
-const {API_BASE_URL} = require('../config');
+import Dialog from 'material-ui/Dialog';
+import FlatButton from 'material-ui/FlatButton';
+import TextField from 'material-ui/TextField';
+import RaisedButton from 'material-ui/RaisedButton';
 
-export default class SignUpForm extends React.Component{
-    constructor(props){
-        super(props);
-        this.state={
-            username: '',
-            password: '',
-        }
-    }
+class RegistrationForm extends Component {
+  constructor(props) {
+      super(props);
+      this.state = {
+          "open": false,
+      };
+  }
 
-    signUp(){
-        console.log('calling sign up function!!')
-        const newUser = {
-            username: this.state.username,
-            password: this.state.password,
-        }
-       console.log(JSON.stringify(newUser));
-       // eslint-disable-next-line
-       fetch(`${API_BASE_URL}/sign-up`, {
-            body: JSON.stringify(newUser),
-            cache: 'default',
-            headers: {
-                'Accept': 'application/json, application/xml, text/plain, text/html, *.*',
-                'content-type': 'application/json',
-            },
-            method: 'POST',
-            mode: 'cors',
-            redirect: 'follow',
-            refferer: 'no-referrer',
 
-        }).then(response => response.json())
-        .then((res)=>{
-            console.log(res);
-            return res;
-        }) .then(user=>{
-            return Promise.resolve(console.log(user))
-        }).catch(err => console.log(err))
-    }
+  handleOpen = () => {
+    this.setState({open: true});
+  };
 
-    handleUsernameChange(event){
-        this.setState({username: event.target.value});
-    }
+  handleClose = () => {
+    this.setState({open: false});
+  };
 
-    handlePasswordChange(event){
-        this.setState({password: event.target.value})
-    }
-    render(){
-      return(
-          <form id='sign-up-form' onSubmit={e => {e.preventDefault(); this.signUp()}}>
-              <label htmlFor='userName'>Username</label>
-              <input id='userName' value={this.state.username} onChange={e => this.handleUsernameChange(e)} />
+  render() {
+    const actions = [
+      <FlatButton
+        type="reset"
+        label="Reset"
+        secondary={true}
+        style={{ float: 'left' }}
+        />,
+      <FlatButton
+        label="Cancel"
+        primary={true}
+        onClick={this.handleClose}
+      />,
+      <FlatButton
+        type="submit"
+        label="Submit"
+        primary={true}
+      />,
+    ];
 
-              <label htmlFor='password'>Password</label>
-              <input id='password' value={this.state.password} onChange={e => this.handlePasswordChange(e)} />
 
-              <button type='submit' htmlFor='sign-up-form'>Submit</button>
+    return (
+      <div style={{display: `block`}}>
+        <RaisedButton className="reg-button" label="Register" onClick={this.handleOpen} />
+        <Dialog
+            title="Registration"
+            modal={true}
+            open={this.state.open}
+            autoScrollBodyContent={true}
+          >
+           <form onSubmit={(e) => { e.preventDefault(); this.handleClose(); }}>
+            <TextField name="username" hintText="Username" required={true}/><br />
+            <TextField name="pwd" type="password" hintText="Password" required={true}/>
+            <div style={{ textAlign: 'right', padding: 8, margin: '24px -24px -24px -24px' }}>
+              {actions}
+            </div>
           </form>
-      );
+        </Dialog>
+      </div>
+    );
   }
 }
+
+export default RegistrationForm;
