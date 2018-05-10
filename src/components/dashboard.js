@@ -28,7 +28,7 @@ class Dashboard extends Component {
                       title="Fridgeful"
                       onLeftIconButtonClick={this.handleToggle}
                       className="app-bar"
-                      style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}}
+                      style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19)', backgroundColor: 'black'}}
                   />
         
                   <Drawer
@@ -37,9 +37,12 @@ class Dashboard extends Component {
                       open={this.state.open}
                       onRequestChange={(open) => this.setState({open})}>
 
-                      <AppBar title="Fridgeful" style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}}/>
+                      <AppBar title="Fridgeful" style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19)', backgroundColor: 'black'}}/>
+                      
                       <MenuItem containerElement={<Link to="/" />} id="home">Home</MenuItem>
-
+                      <MenuItem  id="dashboard">Dashboard</MenuItem>
+                      <MenuItem  id="recipes">Recipes</MenuItem>
+                      <MenuItem  id="logout">Log Out</MenuItem>
                   </Drawer>
               </div>
           </div>
