@@ -1,3 +1,4 @@
+
 * { 
     box-sizing: border-box;
 }
@@ -30,8 +31,4 @@
     text-align: center;
     color: black;
   
-}
-
-.app-bar{
-    position: fixed !important;
 }

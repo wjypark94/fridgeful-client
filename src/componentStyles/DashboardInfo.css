@@ -1,0 +1,11 @@
+*{
+    box-sizing: border-box;
+}
+
+.dashboard-title{
+    text-align: center;
+}
+
+.dashboard-text{
+    text-align: center;
+}
