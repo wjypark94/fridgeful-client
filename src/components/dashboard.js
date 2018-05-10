@@ -41,9 +41,9 @@ class Dashboard extends Component {
                       <AppBar title="Fridgeful" style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19)', backgroundColor: 'dimgrey'}} />
 
                       <MenuItem containerElement={<Link to="/login-form" />} id="login">Log In</MenuItem>
-                      <MenuItem id="dashboard">Dashboard</MenuItem>
-                      <MenuItem id="recipes">Recipes</MenuItem>
-                      <MenuItem id="logout">Log Out</MenuItem>
+                      <MenuItem containerElement={<Link to ="dashboard"/>} id="dashboard">Dashboard</MenuItem>
+                      <MenuItem containerElement={<Link to ="/recipes-page"/>} id="recipes">Recipes</MenuItem>
+                      <MenuItem containerElement={<Link to ="/"/>} id="logout">Log Out</MenuItem>
                   </Drawer>
                   
                 </div>
