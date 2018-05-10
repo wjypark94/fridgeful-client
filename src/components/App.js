@@ -8,13 +8,14 @@ import LoginForm from './login-form';
 import Home from './Home';
 import Dashboard from './dashboard';
 import RecipesPage from './recipes-page';
+import history from '../history';
 
 
 class App extends Component {
 
   render(){
     return (
-      <Router>
+      <Router history={history}>
         <div className="app">
             <Route exact path="/" component={Home}/>
             <Route exact path="/dashboard" component={Dashboard} />
@@ -28,4 +29,3 @@ class App extends Component {
 }
 
 export default App;
-//<Route exact path="/" component={Home}/>
