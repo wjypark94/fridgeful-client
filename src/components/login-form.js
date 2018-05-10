@@ -3,7 +3,7 @@ import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
 import MenuItem from 'material-ui/MenuItem';
-
+import '../componentStyles/login-form.css';
 
 class LoginForm extends Component {
     constructor(props){
@@ -43,23 +43,23 @@ class LoginForm extends Component {
     
 
     return(
-       <div>
+        <div style={{display: `block`}}>
         <MenuItem id="login" onClick={this.handleOpen}>Login</MenuItem>
         <Dialog
-            title="Log In"
+            title="Login"
             modal={true}
             open={this.state.open}
             autoScrollBodyContent={true}
-        >
-            <form onSubmit={(e) => {e.preventDefault(); this.handleClose(); }}>
-              <TextField name="username" hintText="Username" required={true}/>
-              <TextField name="password" hintText="Password" required={true}/>
-              <div style={{textAlign: 'right', padding: 8}}>
-                  {actions}
-              </div>
-            </form>
+          >
+           <form onSubmit={(e) => { e.preventDefault(); this.handleClose(); }}>
+            <TextField name="username" hintText="Username" required={true}/><br />
+            <TextField name="pwd" type="password" hintText="Password" required={true}/>
+            <div style={{ textAlign: 'right', padding: 8}}>
+              {actions}
+            </div>
+          </form>
         </Dialog>
-       </div>
+      </div>
     )
 }
 }
