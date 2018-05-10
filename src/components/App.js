@@ -5,8 +5,8 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import SignUpForm from './sign-up-form';
 import LoginForm from './login-form';
 
-
-import Dashboard from './Dashboard';
+import Home from './Home';
+import Dashboard from './dashboard';
 
 
 class App extends Component {
@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <Router>
         <div className="app">
-         
+            <Route exact path="/" component={Home}/>
             <Route exact path="/dashboard" component={Dashboard} />
             <Route exact path="/sign-up-form" component={SignUpForm}/>
             <Route exact path="/login-form" component={LoginForm}/>
