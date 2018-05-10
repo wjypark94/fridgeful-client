@@ -7,6 +7,7 @@ import SignUpForm from './sign-up-form';
 import LoginForm from './login-form';
 
 import Home from './Home';
+import Dashboard from './Dashboard';
 
 export default function App(props) {
     return (
@@ -14,7 +15,7 @@ export default function App(props) {
         <div className='app'>
           <main>
             <Route exact path='/' component={Home}/>
-            
+            <Route exact path='/dashboard' component={Dashboard}/>
             <Route exact path='/sign-up-form' component={SignUpForm}/>
             <Route exact path='/login-form' component={LoginForm}/>
           </main>
