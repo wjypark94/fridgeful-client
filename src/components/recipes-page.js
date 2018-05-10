@@ -3,6 +3,8 @@ import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import { Link } from 'react-router-dom';
+import RecipeInfo from './recipes-info';
+import '../componentStyles/Recipes.css';
 
 class RecipesPage extends Component {
     constructor(props){
@@ -24,6 +26,7 @@ class RecipesPage extends Component {
                     className="app-bar"
                     style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19)', backgroundColor: 'black' }}
             />
+                <RecipeInfo/>
                 <Drawer
                     docked={false}
                     width={250}

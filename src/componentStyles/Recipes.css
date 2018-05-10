@@ -1,0 +1,10 @@
+.main-display{
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    min-height: 400px;
+}
+
+* { 
+    box-sizing: border-box;
+}
+

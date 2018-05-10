@@ -1,0 +1,11 @@
+*{
+    box-sizing: border-box;
+}
+
+.recipe-title{
+    text-align: center;
+}
+
+.recipe-text{
+    text-align: center;
+}
