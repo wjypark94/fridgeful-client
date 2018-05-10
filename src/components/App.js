@@ -5,7 +5,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import SignUpForm from './sign-up-form';
 import LoginForm from './login-form';
 
-import Home from './Home';
+
 import Dashboard from './Dashboard';
 
 
@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <Router>
         <div className="app">
-            <Route exact path="/" component={Home}/>
+         
             <Route exact path="/dashboard" component={Dashboard} />
             <Route exact path="/sign-up-form" component={SignUpForm}/>
             <Route exact path="/login-form" component={LoginForm}/>
@@ -26,3 +26,4 @@ class App extends Component {
 }
 
 export default App;
+//<Route exact path="/" component={Home}/>
