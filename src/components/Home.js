@@ -4,8 +4,7 @@ import AboutSection from './AboutSection';
 import Header from './Header';
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
-import MenuItem from 'material-ui/MenuItem';
-import { Link } from 'react-router-dom';
+
 import RegistrationForm from './sign-up-form';
 import LoginForm from './login-form';
 
