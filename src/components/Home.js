@@ -4,9 +4,10 @@ import AboutSection from './AboutSection';
 import Header from './Header';
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
-
+import MenuItem from 'material-ui/MenuItem';
 import RegistrationForm from './sign-up-form';
-import LoginForm from './login-form';
+import { Link } from 'react-router-dom';
+
 
 class Home extends Component{ 
     constructor(props){
@@ -38,7 +39,7 @@ class Home extends Component{
 
                       <AppBar title="Fridgeful" style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19)', backgroundColor: 'black'}} />
 
-                      <LoginForm/>
+                      <MenuItem containerElement={<Link to="/login-form" />} id="login">Log In</MenuItem>
                       <RegistrationForm/>
                   </Drawer>
                   

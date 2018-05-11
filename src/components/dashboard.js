@@ -6,6 +6,8 @@ import MenuItem from 'material-ui/MenuItem';
 import { Link } from 'react-router-dom';
 import DashboardInfo from './dashboard-info';
 import '../componentStyles/dashboard.css';
+import { connect } from 'react-redux';
+import { logoutUser } from '../actions';
 
 
 
@@ -43,7 +45,7 @@ class Dashboard extends Component {
                       <MenuItem containerElement={<Link to="/" />} id="home">Home</MenuItem>
                       <MenuItem containerElement={<Link to ="dashboard"/>} id="dashboard">Dashboard</MenuItem>
                       <MenuItem containerElement={<Link to ="/recipes-page"/>} id="recipes">Recipes</MenuItem>
-                      <MenuItem containerElement={<Link to ="/"/>} id="logout">Log Out</MenuItem>
+                      <MenuItem onClick={() => this.props.dispatch(logoutUser())} id="logout">Log Out</MenuItem>
                   </Drawer>
                   
                 </div>
@@ -53,4 +55,4 @@ class Dashboard extends Component {
 }
 
 
-export default Dashboard;
+export default connect()(Dashboard);

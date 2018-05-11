@@ -3,9 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "history": "^4.7.2",
     "jest-cli": "^20.0.4",
     "material-ui": "^0.20.0",
+    "moment": "^2.22.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-redux": "^5.0.7",
@@ -15,7 +19,8 @@
     "redux-form-material-ui": "^4.3.4",
     "redux-promise-middleware": "^5.1.1",
     "redux-thunk": "^2.2.0",
-    "webpack": "^4.8.1"
+    "webpack": "^4.8.1",
+    "whatwg-fetch": "^2.0.4"
   },
   "scripts": {
     "start": "react-scripts start",

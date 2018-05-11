@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
+
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
 import MenuItem from 'material-ui/MenuItem'
-import '../componentStyles/sign-up-form.css';
+import { connect } from 'react-redux';
+import { registerUser } from '../actions';
 
-class RegistrationForm extends Component {
+class LoginForm extends Component {
   constructor(props) {
       super(props);
       this.state = {
           "open": false,
       };
   }
-
 
   handleOpen = () => {
     this.setState({open: true});
@@ -47,14 +48,23 @@ class RegistrationForm extends Component {
       <div style={{display: `block`}}>
         <MenuItem id="register" onClick={this.handleOpen}>Register</MenuItem>
         <Dialog
-            title="Sign Up"
+            title="Registration"
             modal={true}
             open={this.state.open}
             autoScrollBodyContent={true}
           >
-           <form onSubmit={(e) => { e.preventDefault(); this.handleClose(); }}>
-            <TextField name="username" hintText="Username" required={true}/><br />
-            <TextField name="pwd" type="password" hintText="Password" required={true}/>
+          Create a username and password
+          <form onSubmit={(e) => {
+                e.preventDefault();
+                this.handleClose();
+
+                const username = e.target.username.value;
+                const password = e.target.password.value;
+ 
+                this.props.dispatch(registerUser(username, password));
+            }}>
+            <TextField name="username" type="text" hintText="Username" required={true}/><br />
+            <TextField name="password" type="password" hintText="Password" required={true}/>
             <div style={{ textAlign: 'right', padding: 8, margin: '24px -24px -24px -24px' }}>
               {actions}
             </div>
@@ -65,4 +75,4 @@ class RegistrationForm extends Component {
   }
 }
 
-export default RegistrationForm;
+export default connect()(LoginForm);

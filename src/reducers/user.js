@@ -1,15 +1,27 @@
 const initialState = {
-    data: {}
-}
-
-const user = (state = initialState, action) => {
+    data: {},
+    authToken: null,
+    userId: null,
+  }
+  
+  const user = (state = initialState, action) => {
     switch (action.type) {
-        case '';
-            return {}
-
-        default:
-            return state;
+      case 'REGISTER_USER_SUCCESS':
+        return {
+          ...state,
+          data: action.user
+        }
+  
+      case 'LOGIN_USER_SUCCESS':
+        return {
+          ...state,
+          authToken: action.token,
+          userId: action.userId
+        }
+  
+      default:
+        return state;
     }
-}
-
-export default user;
+  }
+  
+  export default user;

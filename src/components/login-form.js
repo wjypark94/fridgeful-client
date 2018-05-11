@@ -1,67 +1,77 @@
+
 import React, { Component } from 'react';
+
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
-import MenuItem from 'material-ui/MenuItem';
-import '../componentStyles/login-form.css';
+import AppBar from 'material-ui/AppBar';
+import { connect } from 'react-redux';
+import { loginUser } from '../actions';
+
 
 class LoginForm extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            "open": false,
-        };
-    }
+  constructor(props) {
+    super(props);
+    this.state = { open: true };
+    this.handleClose = this._handleClose.bind(this);
+  }
 
-    handleOpen = () => {
-        this.setState({open: true});
-    };
+  _handleClose() {
+    this.setState({ open: false });
+  }
 
-    handleClose = () => {
-        this.setState({open: false});
-    };
 
-    render(){
-        const actions = [
-            <FlatButton
-            type="reset"
-            label="reset"
-            secondary={true}
-            style={{float: 'left'}}
-            />,
-            <FlatButton
-            label="Cancel"
-            primary={true}
-            onClick={this.handleClose}
-            />,
-            <FlatButton
-            type="submit"
-            label="Submit"
-            primary={true}
-            />,
-        ];
-    
 
-    return(
-        <div style={{display: `block`}}>
-        <MenuItem id="login" onClick={this.handleOpen}>Login</MenuItem>
+  render() {
+    const actions = [
+      <FlatButton
+        type="reset"
+        label="Reset"
+        secondary={true}
+        style={{ float: 'left' }}
+        />,
+      <FlatButton
+        type="submit"
+        label="Submit"
+        primary={true}
+        />,
+    ];
+
+    return (
+      <div className="main-background">
+        <AppBar
+            iconClassNameRight="muidocs-icon-navigation-expand-more"
+            title="Fridgeful"
+            className="app-bar"
+            style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19)', backgroundColor: 'black'}}
+                  />
         <Dialog
-            title="Login"
-            modal={true}
-            open={this.state.open}
-            autoScrollBodyContent={true}
+          title="Log In"
+          modal={true}
+          open={this.state.open}
+          autoScrollBodyContent={true}
           >
-           <form onSubmit={(e) => { e.preventDefault(); this.handleClose(); }}>
-            <TextField name="username" hintText="Username" required={true}/><br />
-            <TextField name="pwd" type="password" hintText="Password" required={true}/>
-            <div style={{ textAlign: 'right', padding: 8}}>
+          <form onSubmit={(e) => {
+              e.preventDefault();
+              this.handleClose();
+
+              const username = e.target.username.value;
+              const password = e.target.password.value;
+
+              this.props.dispatch(loginUser(username, password));
+            }}>
+            <p className="demo-account">Username: Demo</p>
+            <p className="demo-account">Password: 12345</p>
+            <TextField name="username" type="text" hintText="Username" required={true}/><br />
+            <TextField name="password" type="password" hintText="Password" required={true}/>
+            <div style={{ textAlign: 'right', padding: 8, margin: '24px -24px -24px -24px' }}>
               {actions}
             </div>
           </form>
         </Dialog>
       </div>
-    )
-}
+    );
+  }
 }
 
-export default LoginForm;
+export default connect()(LoginForm);
