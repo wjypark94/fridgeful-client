@@ -2,4 +2,19 @@
     box-sizing: border-box;
   }
   
- 
+ .demo-title{
+     font-size: 20px;
+     color: black;
+     font-family: 'Times New Roman';
+     padding-top: -10px;
+ }
+
+ .demo-user{
+     color: black;
+     font-size: 15px;
+ }
+
+ .demo-pw{
+     color: black;
+     font-size: 15px;
+ }

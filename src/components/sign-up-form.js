@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import '../componentStyles/sign-up-form.css';
+
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
@@ -53,7 +55,7 @@ class LoginForm extends Component {
             open={this.state.open}
             autoScrollBodyContent={true}
           >
-          Create a username and password
+          <h1 class="register-header">Create a username and password</h1>
           <form onSubmit={(e) => {
                 e.preventDefault();
                 this.handleClose();
@@ -63,9 +65,10 @@ class LoginForm extends Component {
  
                 this.props.dispatch(registerUser(username, password));
             }}>
+            <br/>
             <TextField name="username" type="text" hintText="Username" required={true}/><br />
             <TextField name="password" type="password" hintText="Password" required={true}/>
-            <div style={{ textAlign: 'right', padding: 8, margin: '24px -24px -24px -24px' }}>
+            <div class="register-form" style={{ textAlign: 'right', margin: '24px -24px -24px -24px'}}>
               {actions}
             </div>
           </form>

@@ -2,4 +2,15 @@
     box-sizing: border-box;
   }
   
- 
+ .register-form{
+     text-align: left;
+     padding: 20px;
+
+ }
+
+ .register-header{
+     font-size: 20px;
+     color: black;
+     font-family: 'Times New Roman';
+     
+ }

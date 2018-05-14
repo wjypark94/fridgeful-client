@@ -8,6 +8,7 @@ import AppBar from 'material-ui/AppBar';
 import { connect } from 'react-redux';
 import { loginUser } from '../actions';
 
+import '../componentStyles/login-form.css';
 
 class LoginForm extends Component {
   constructor(props) {
@@ -19,8 +20,10 @@ class LoginForm extends Component {
   _handleClose() {
     this.setState({ open: false });
   }
-
-
+  
+  cancelButton(){
+      window.location = '/'
+  }
 
   render() {
     const actions = [
@@ -30,6 +33,11 @@ class LoginForm extends Component {
         secondary={true}
         style={{ float: 'left' }}
         />,
+        <FlatButton
+        label="Cancel"
+        primary={true}
+        onClick={this.handleClose, this.cancelButton}
+      />,
       <FlatButton
         type="submit"
         label="Submit"
@@ -50,6 +58,7 @@ class LoginForm extends Component {
           modal={true}
           open={this.state.open}
           autoScrollBodyContent={true}
+          style={{textAlign: 'center'}}
           >
           <form onSubmit={(e) => {
               e.preventDefault();
@@ -60,11 +69,12 @@ class LoginForm extends Component {
 
               this.props.dispatch(loginUser(username, password));
             }}>
-            <p className="demo-account">Username: Demo</p>
-            <p className="demo-account">Password: 12345</p>
+            <h1 class="demo-title">Demo Account</h1>
+            <p className="demo-user">User: demo</p>
+            <p className="demo-pw">PW: 12345</p>
             <TextField name="username" type="text" hintText="Username" required={true}/><br />
             <TextField name="password" type="password" hintText="Password" required={true}/>
-            <div style={{ textAlign: 'right', padding: 8, margin: '24px -24px -24px -24px' }}>
+            <div style={{ textAlign: 'right', padding: 10, margin: '24px -24px -24px -24px'}}>
               {actions}
             </div>
           </form>
