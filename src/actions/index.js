@@ -1,11 +1,9 @@
 import { API_BASE_URL } from '../config';
 import history from '../history';
 
-//Authentication Actions
-
-export const REGISTER_USER_SUCCESS = 'REGISTER_USER_SUCCESS';
+export const REGISTER_USER_SUCCESSFUL = 'REGISTER_USER_SUCCESSFUL';
 export const registerUserSuccess = (user) => ({
-  type: REGISTER_USER_SUCCESS,
+  type: REGISTER_USER_SUCCESSFUL,
   user
 });
 
@@ -23,14 +21,15 @@ export const registerUser = (username, password) => dispatch => {
   .then(res => res.json())
   .then(json => {
       dispatch(registerUserSuccess(json))
+      console.log(json);
       window.location = '/login-form'
   })
   .catch(error => console.log(error))
 }
 
-export const LOGIN_USER_SUCCESS = 'LOGIN_USER_SUCCESS';
+export const LOGIN_USER_SUCCESSFUL = 'LOGIN_USER_SUCCESSFUL';
 export const loginUserSuccess = (userId, token) => ({
-  type: LOGIN_USER_SUCCESS,
+  type: LOGIN_USER_SUCCESSFUL,
   userId,
   token
 });
@@ -52,9 +51,10 @@ export const loginUser = (username, password) => dispatch => {
     localStorage.setItem('userId', response.userId)
     dispatch(loginUserSuccess(response.userId, response.authToken))
     history.push('/dashboard')
+    console.log('successful!!!!!!!')
   })
   .catch(error => {
-    alert('Wrong Username or Password!')
+    alert('Wrong Username or Password!!!!!')
     window.location = '/'
   })
 }

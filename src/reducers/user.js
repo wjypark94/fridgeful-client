@@ -6,13 +6,13 @@ const initialState = {
   
   const user = (state = initialState, action) => {
     switch (action.type) {
-      case 'REGISTER_USER_SUCCESS':
+      case 'REGISTER_USER_SUCCESSFUL':
         return {
           ...state,
           data: action.user
         }
   
-      case 'LOGIN_USER_SUCCESS':
+      case 'LOGIN_USER_SUCCESSFUL':
         return {
           ...state,
           authToken: action.token,
