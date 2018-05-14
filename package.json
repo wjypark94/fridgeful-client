@@ -19,7 +19,7 @@
     "redux-form-material-ui": "^4.3.4",
     "redux-promise-middleware": "^5.1.1",
     "redux-thunk": "^2.2.0",
-    "webpack": "^4.8.1",
+    "webpack": "^3.11.0",
     "whatwg-fetch": "^2.0.4"
   },
   "scripts": {
