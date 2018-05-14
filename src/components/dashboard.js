@@ -4,7 +4,7 @@ import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import { Link } from 'react-router-dom';
-import DashboardInfo from './dashboard-info';
+
 import '../componentStyles/dashboard.css';
 import { connect } from 'react-redux';
 import { logoutUser } from '../actions';
@@ -35,7 +35,6 @@ class Dashboard extends Component {
                       className="app-bar"
                       style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19)', backgroundColor: 'black' }}
                   />
-                  <DashboardInfo/>
                   <Search/>
                     <Drawer
                       docked={false}
