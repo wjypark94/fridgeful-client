@@ -9,8 +9,8 @@ import '../componentStyles/dashboard.css';
 import { connect } from 'react-redux';
 import { logoutUser } from '../actions';
 
-import Search from './Search';
-import Results from './Results';
+import Search from './search';
+import Results from './results';
 
 
 
