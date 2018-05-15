@@ -5,10 +5,7 @@ import $ from 'jquery';
 const API_KEY = "05657dfe9f118702432a2379f889bdf2";
 const APP_ID ="4ad3534f";
 const SEARCH_URL = "https://api.edamam.com/search";
-const state = {
-    from: 0,
-    to: 3
-};
+
 
   function getDataFromRecipeApi() {
     let input = $('#recipe-query').val();
@@ -26,7 +23,13 @@ const state = {
           success: function (data) {
               try {
                   console.log(data);
-                  let results;
+                  var hitsHtml = "";
+                  for (var i = 0; i < data.hits.length; i++){
+                      var eachHit = data.hits[i];
+                      var eachHitHtml = displayResults(eachHit)
+                      hitsHtml += eachHitHtml;
+                  }
+                  $('#js-results').html(hitsHtml);
               }
               catch (e) {
                   console.log(e);
@@ -36,7 +39,13 @@ const state = {
   };
 
   function displayResults(result){
-      console.log(result);
+      return `
+        <div class="result col-3">
+            <h2 class="recipe-name"> ${result.recipe["label"]} </h2>
+   
+        </div>
+      
+      `
   }
 
   function searchForm() {

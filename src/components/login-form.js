@@ -15,6 +15,7 @@ class LoginForm extends Component {
     super(props);
     this.state = { open: true };
     this.handleClose = this._handleClose.bind(this);
+    this.handleButton = this.handleButton.bind(this);
   }
 
   _handleClose() {
@@ -23,6 +24,11 @@ class LoginForm extends Component {
   
   cancelButton(){
       window.location = '/'
+  }
+
+  handleButton(){
+    this.handleClose();
+    this.cancelButton();
   }
 
   render() {
@@ -36,7 +42,7 @@ class LoginForm extends Component {
         <FlatButton
         label="Cancel"
         primary={true}
-        onClick={this.handleClose, this.cancelButton}
+        onClick={this.handleButton}
       />,
       <FlatButton
         type="submit"
