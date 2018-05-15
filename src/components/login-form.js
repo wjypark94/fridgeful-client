@@ -42,7 +42,7 @@ class LoginForm extends Component {
         type="submit"
         label="Submit"
         primary={true}
-        />,
+        />
     ];
 
     return (
