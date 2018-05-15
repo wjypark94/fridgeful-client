@@ -60,18 +60,16 @@ const SEARCH_URL = "https://api.edamam.com/search";
 $(searchForm);
 
 
-  
-
 const Search = (props) => {
     return (
-        <div class="dashboard-display">
-            <header class="row">
-                <h1 class="logo">Fridgeful Dashboard</h1>
+        <div className="dashboard-display">
+            <header className="row">
+                <h1 className="logo">Fridgeful Dashboard</h1>
                 <p>Let's get started and search some recipes</p> 
             </header>
-            <form action="#" class="recipes-form" id="recipes-form">
-                <input type="text" placeholder="Enter ingredients.." aria-label="input" class="recipe-query" id="recipe-query"/>
-                <button type="submit" aria-label="search class" class="submit-button"> Search </button>
+            <form action="#" className="recipes-form" id="recipes-form">
+                <input type="text" placeholder="Enter ingredients.." aria-label="input" className="recipe-query" id="recipe-query"/>
+                <button type="submit" aria-label="search class" className="submit-button"> Search </button>
             </form>
 
             <div id="js-results">

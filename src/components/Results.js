@@ -3,8 +3,8 @@ import '../componentStyles/Results.css';
 
 const Results = (props) =>{
     return(
-        <div class="recipe-results">
-            <h1 class="results-header">
+        <div className="recipe-results">
+            <h1 className="results-header">
                 Here are the recipe results. 
             </h1> 
         </div>
