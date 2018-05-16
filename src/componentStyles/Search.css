@@ -42,65 +42,31 @@ h1.logo {
 
 /*******/
 
-  .result-image {
-  width: 100%;
-  float: left;
 
-  background-size: cover;
-  background-position: center center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+.card:not(:hover) {
+  opacity: 0.8;
+  transition: opacity 0.5s ease-in;
 }
 
-img{
-  width: 80%;
+.card:hover {
+  opacity: 1.0;
+  transition: opacity 0.5s ease-in;
 }
 
-.col-3,
-.result {
-  margin: 10px;
-  border-radius: 5px;
-  padding: 10px;
-  background: rgba(230, 223, 223, 0.7);
-  width: 100%;
+#js-results {
+  padding-bottom: 1rem;
 }
 
-.result-description {
-  padding: 10px;
-  overflow: hidden;
-  font-size: 0.9em;
-  text-align: justify;
+.card-txt, .card-txt-lines {
+  display: flex;
+  font-family: 'Times New Roman';
 }
 
-.result-description h2{
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 1.3em;
+.card-title {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
 }
 
 
-#js-results span {
-  display: inline-block;
-  border-radius: 5px;
-  vertical-align: top;
-  height: 32px;
-  background-color: #ccc;
-  padding: 0;
-}
-
-.row { 
-  padding-left: 20px;
-  margin: 0 auto;
-  padding-right: 20px;
-  max-width: 1000px;
-}
 
 
-@media screen and (min-width: 640px) {
-  .col-3 {
-      display: inline-block;
-      width: 30%;
-      height: 90%;
-      vertical-align: text-top;
-  }
-}

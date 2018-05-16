@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../componentStyles/App.css';
 import {Router, Route} from 'react-router-dom';
-
 import Home from './Home';
 import Dashboard from './dashboard';
 import RecipesPage from './recipes-page';

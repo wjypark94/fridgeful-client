@@ -40,21 +40,32 @@ const SEARCH_URL = "https://api.edamam.com/search";
 
   function displayResults(result){
       return `
-        <div class="result col-3">
-            <div class="result-image"> <img src="${result.recipe.image}"> </div>
-
-            <div class="result-description"> </div>
-            <h2 class="result-name"> ${result.recipe["label"]} </h2>
-            <h3>${Math.round(result.recipe.calories)} Calories </h3>
-            <h3>${result.recipe.dietLabels}</h3>
-            
-         
+    <div class="col s12 m4">
+    <div class="card">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class=" activator js-img" src="${result.recipe.image}">
+          <span class="card-title">${result.recipe.label}</span>
         </div>
+        <div class="card-content">
+           <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
+           </div>
+        <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4"><i class="small material-icons right">close</i></span>
+        <p class="card-txt">${result.recipe.dietLabels}</p>
+        <p class="card-txt" id="card-cal">${Math.round(result.recipe.calories)} Calories</p>
+        <p class="card-txt" id="card-carb">${Math.round(result.recipe.totalNutrients.CHOCDF.quantity)}<span>${result.recipe.totalNutrients.CHOCDF.unit} Carbs per serving</span></p>
+        <p class="card-txt-lines">${result.recipe.ingredientLines}</p>
+       </div>
+        <div class="card-action">
+          <a href="${result.recipe.url}" target="_blank">Try It!</a>
+          <a> Save it! </a>
+        </div>
+      </div>
+    </div>
+    </div>
       
       `
   }
-
-  //<h3>Ingredients: <br> ${result.recipe.ingredientLines}</h3>
 
   function searchForm() {
     $('.recipes-form').submit(function (event) {
@@ -79,7 +90,7 @@ const Search = (props) => {
                 <input type="text" placeholder="Enter ingredients.." aria-label="input" className="recipe-query" id="recipe-query"/>
                 <button type="submit" aria-label="search class" className="submit-button"> Search </button>
             </form>
-            <div id="js-results" class="row">
+            <div id="js-results" className="row">
             </div>
         </div>
     );
