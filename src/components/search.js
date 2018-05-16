@@ -57,8 +57,8 @@ const SEARCH_URL = "https://api.edamam.com/search";
         <p class="card-txt-lines">${result.recipe.ingredientLines}</p>
        </div>
         <div class="card-action">
-          <a href="${result.recipe.url}" target="_blank">Try It!</a>
-          <a> Save it! </a>
+          <a href="${result.recipe.url}" target="_blank">Try It Now!</a>
+          <button class="save-button"> SAVE IT! </button>
         </div>
       </div>
     </div>

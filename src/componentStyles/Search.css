@@ -67,6 +67,9 @@ h1.logo {
     width: 100%;
 }
 
-
+.save-button{
+  border: none;
+  font-weight: bold;
+}
 
 
