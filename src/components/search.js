@@ -30,6 +30,16 @@ const SEARCH_URL = "https://api.edamam.com/search";
                       hitsHtml += eachHitHtml;
                   }
                   $('#js-results').html(hitsHtml);
+                  $('.save-button').on('click', function(e){
+                      console.log('Recipe saved!');
+                      var e = window.event;
+                      var btn = e.target || e.srcElement;
+                      const recipeTitle = btn.id;
+                      const img = btn.getAttribute('data-imgurl');
+                      console.log(btn.id);
+                      console.log(img);
+                
+                  })
               }
               catch (e) {
                   console.log(e);
@@ -58,7 +68,7 @@ const SEARCH_URL = "https://api.edamam.com/search";
        </div>
         <div class="card-action">
           <a href="${result.recipe.url}" target="_blank">Try It Now!</a>
-          <button class="save-button"> SAVE IT! </button>
+          <button type="submit" aria-label="search" class="save-button" id="${result.recipe.label}" data-imgurl="${result.recipe.image}"> SAVE IT! </button>
         </div>
       </div>
     </div>
