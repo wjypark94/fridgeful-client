@@ -43,9 +43,9 @@ const SEARCH_URL = "https://api.edamam.com/search";
         <div class="result col-3">
             <h2 class="recipe-name"> ${result.recipe["label"]} </h2>
             <img src="${result.recipe.image}">   
-            <h3>${result.recipe.calories}</h3>
+            <h3>${Math.round(result.recipe.calories)} Calories </h3>
             <h3>${result.recipe.dietLabels}</h3>
-            <h3>${result.recipe.ingredientLines}</h3>
+            <h3>Ingredients: <br> ${result.recipe.ingredientLines}</h3>
          
         </div>
       
