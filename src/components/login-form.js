@@ -75,7 +75,7 @@ class LoginForm extends Component {
 
               this.props.dispatch(loginUser(username, password));
             }}>
-            <h1 class="demo-title">Demo Account</h1>
+            <h1 className="demo-title">Demo Account</h1>
             <p className="demo-user">User: demo</p>
             <p className="demo-pw">PW: 12345</p>
             <TextField name="username" type="text" hintText="Username" required={true}/><br />
