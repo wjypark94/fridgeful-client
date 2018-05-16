@@ -1,41 +1,106 @@
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 
 .recipes-form{
- 
-    padding: 30px;
+
+  padding: 30px;
 }
 
 .recipes-form input {
-  height: 45px;
-  width: 250px;
-  padding: 12px;
-  font-size: 18px;
+height: 45px;
+width: 250px;
+padding: 12px;
+font-size: 18px;
 
 }
 
 .recipes-form button {
-    height: 40px;
-    width: 100px;
-    border: 0px;
-    border-radius: 5px;
-    margin-left: 10px;
-    box-shadow: 0 0 5px black;
-    font-size: 21px;
-  }
+  height: 40px;
+  width: 100px;
+  border: 0px;
+  border-radius: 5px;
+  margin-left: 10px;
+  box-shadow: 0 0 5px black;
+  font-size: 21px;
+}
 
-  .dashboard-display{
-      padding-top: 40px;
-      text-align: center;
-  }
+.dashboard-display{
+    padding-top: 40px;
+    text-align: center;
+}
 
 
-  html body {
-    background: #f2f2f2;
-  }
+html body {
+  background: #f2f2f2;
+}
 
-  h1.logo {
-  
-    font-family: 'Homenaje';
+h1.logo {
+
+  font-family: 'Homenaje';
+}
+
+/*******/
+
+  .result-image {
+  width: 100%;
+  float: left;
+
+  background-size: cover;
+  background-position: center center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+img{
+  width: 80%;
+}
+
+.col-3,
+.result {
+  margin: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  background: rgba(230, 223, 223, 0.7);
+  width: 100%;
+}
+
+.result-description {
+  padding: 10px;
+  overflow: hidden;
+  font-size: 0.9em;
+  text-align: justify;
+}
+
+.result-description h2{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 1.3em;
+}
+
+
+#js-results span {
+  display: inline-block;
+  border-radius: 5px;
+  vertical-align: top;
+  height: 32px;
+  background-color: #ccc;
+  padding: 0;
+}
+
+.row { 
+  padding-left: 20px;
+  margin: 0 auto;
+  padding-right: 20px;
+  max-width: 1000px;
+}
+
+
+@media screen and (min-width: 640px) {
+  .col-3 {
+      display: inline-block;
+      width: 30%;
+      height: 90%;
+      vertical-align: text-top;
   }
+}

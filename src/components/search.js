@@ -41,16 +41,20 @@ const SEARCH_URL = "https://api.edamam.com/search";
   function displayResults(result){
       return `
         <div class="result col-3">
-            <h2 class="recipe-name"> ${result.recipe["label"]} </h2>
-            <img src="${result.recipe.image}">   
+            <div class="result-image"> <img src="${result.recipe.image}"> </div>
+
+            <div class="result-description"> </div>
+            <h2 class="result-name"> ${result.recipe["label"]} </h2>
             <h3>${Math.round(result.recipe.calories)} Calories </h3>
             <h3>${result.recipe.dietLabels}</h3>
-            <h3>Ingredients: <br> ${result.recipe.ingredientLines}</h3>
+            
          
         </div>
       
       `
   }
+
+  //<h3>Ingredients: <br> ${result.recipe.ingredientLines}</h3>
 
   function searchForm() {
     $('.recipes-form').submit(function (event) {
@@ -75,11 +79,9 @@ const Search = (props) => {
                 <input type="text" placeholder="Enter ingredients.." aria-label="input" className="recipe-query" id="recipe-query"/>
                 <button type="submit" aria-label="search class" className="submit-button"> Search </button>
             </form>
-
-            <div id="js-results">
+            <div id="js-results" class="row">
             </div>
         </div>
     );
 };
-
 export default Search;
