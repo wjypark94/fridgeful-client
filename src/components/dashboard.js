@@ -34,7 +34,6 @@ class Dashboard extends Component {
                       style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19)', backgroundColor: 'black' }}
                   />
                   <Search/>
-                  <Results/>
                     <Drawer
                       docked={false}
                       width={250}
