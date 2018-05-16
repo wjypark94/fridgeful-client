@@ -8,10 +8,7 @@ import { Link } from 'react-router-dom';
 import '../componentStyles/dashboard.css';
 import { connect } from 'react-redux';
 import { logoutUser } from '../actions';
-
 import Search from './search';
-import Results from './results';
-
 
 
 class Dashboard extends Component {
