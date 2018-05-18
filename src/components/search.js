@@ -2,11 +2,15 @@ import React from 'react';
 import '../componentStyles/Search.css';
 import $ from 'jquery';
 
+import { API_BASE_URL } from '../config';
+
 const API_KEY = "05657dfe9f118702432a2379f889bdf2";
 const APP_ID ="4ad3534f";
 const SEARCH_URL = "https://api.edamam.com/search";
 
 
+
+//get data from edamam api
   function getDataFromRecipeApi() {
     let input = $('#recipe-query').val();
       $.ajax({
@@ -32,13 +36,13 @@ const SEARCH_URL = "https://api.edamam.com/search";
                   $('#js-results').html(hitsHtml);
                   $('.save-button').on('click', function(e){
                       console.log('Recipe saved!');
-                      var e = window.event;
+                      
                       var btn = e.target || e.srcElement;
                       const recipeTitle = btn.id;
                       const img = btn.getAttribute('data-imgurl');
                       console.log(btn.id);
                       console.log(img);
-                
+                      addNewRecipe(recipeTitle, img);
                   })
               }
               catch (e) {
@@ -47,7 +51,7 @@ const SEARCH_URL = "https://api.edamam.com/search";
           }
         })
   };
-
+//display results from edamam api
   function displayResults(result){
       return `
     <div class="col s12 m4">
@@ -87,6 +91,35 @@ const SEARCH_URL = "https://api.edamam.com/search";
 }
 
 $(searchForm);
+
+//post recipeRequest
+
+function postRecipeRequest(userId, title, img, content){
+    $.ajax({
+        method: 'POST',
+        url: `${API_BASE_URL}/recipelist`,
+        data: JSON.stringify({
+            userId: localStorage.getItem('userId'),
+            title: title,
+            img: img,
+            content: content,
+        }),
+        contentType: 'application/json',
+        dataType: 'json',
+        success: result => {
+            console.log(result);
+        }
+    })
+}
+
+function addNewRecipe(recipeTitle, img){
+    const userId = localStorage.getItem('userId');
+    console.log("hello we are adding a new recipe");
+    const content = "Write any comments here";
+    postRecipeRequest(userId, recipeTitle, img, content);
+}
+
+
 
 
 const Search = (props) => {
