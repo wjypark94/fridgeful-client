@@ -13,10 +13,10 @@ function getRecipeEntries(callbackFn) {
        success: data => {
          if(data) {
            let results = data;
-           console.log('we are getting the data!')
-           console.log(results);
+          //console.log('we are getting the data!')
+           //console.log(results);
            callbackFn(results);
-           console.log(data.recipe);     
+          //console.log(data.recipe);     
          }
        }
      });

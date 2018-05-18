@@ -5,8 +5,7 @@ import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import { Link } from 'react-router-dom';
 import '../componentStyles/Edit.css';
-
-
+import Form from './recipes-form';
 
 class Edit extends Component {
     constructor(props){
@@ -28,6 +27,7 @@ class Edit extends Component {
                     className="app-bar"
                     style={{backgroundColor: 'black', boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'}}
                 />
+                <Form/>
                 <Drawer
                     docked={false}
                     width={250}
@@ -42,23 +42,9 @@ class Edit extends Component {
 
                 </Drawer>
                 
-                <div class="row">
-                <div class="col-3">
-                    <form class="new-recipe-form">
-                    <div name="new-recipe-input row">
-                        <input class="col-12" placeholder="Recipe Place" aria-label="title-input" type="text" name="recipe-title" id="recipe-title" autocomplete="off"/>
-                        <textarea id="todolist" rows="8" cols="60" aria-label="text-area" class="recipe-entry col-12" placeholder="Write any comments/reviews..."></textarea>
-                    </div>
-
-                        <div class="submit col-3">
-                        <button type="submit" class="publish">Update</button>
-                        </div>
-                    </form>
-                </div>
-                </div>
-
             </div>
         );
     }
 };
 export default Edit;
+

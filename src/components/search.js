@@ -84,7 +84,7 @@ const SEARCH_URL = "https://api.edamam.com/search";
   function searchForm() {
     $('.recipes-form').submit(function (event) {
         event.preventDefault();
-        console.log('Hello')
+        //console.log('Hello')
         getDataFromRecipeApi();
    
     });
@@ -114,7 +114,7 @@ function postRecipeRequest(userId, title, img, content){
 
 function addNewRecipe(recipeTitle, img){
     const userId = localStorage.getItem('userId');
-    console.log("hello we are adding a new recipe");
+    //console.log("hello we are adding a new recipe");
     const content = "Write any comments here";
     postRecipeRequest(userId, recipeTitle, img, content);
 }
