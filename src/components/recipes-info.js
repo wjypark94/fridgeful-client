@@ -26,9 +26,15 @@ function getRecipeEntries(callbackFn) {
    function displayRecipeEntries(data) {
     for (var i = 0; i < data.recipe.length; i++){
         $('.recipe-results').append(`
-        <p>${data.recipe[i].title}</p>
-        <img class="recipe-image" src="${data.recipe[i].img}">
-        <p class="recipe-content">${data.recipe[i].content}</p>
+        <div class="col-8" id="${data.recipe[i].id}">
+        <button class="btn row">${data.recipe[i].title}</button>
+          <div class="acd-content col-12">
+          <img class="recipe-image" src="${data.recipe[i].img}">
+          <p class="recipe-content">${data.recipe[i].content}</p>
+          <button id="${data.recipe[i].id}" class="delete-btn">Delete</button><button id="${data.recipe[i].id}" class="edit-btn">Edit</button>
+          <div id="raw-data" hidden>${JSON.stringify(data.recipe[i])}</div>
+          </div>
+        </div>
         `);
     }
   }
@@ -39,13 +45,24 @@ function getRecipeEntries(callbackFn) {
 
   $(getAndDisplayRecipeEntries);
 
+   
+   $(document).on('click', 'button', function () {
+    $(this).toggleClass("max").next().slideToggle(500);
+   });
+   
+   $(document).on('click', '.edit-btn', function(event) {
+    window.localStorage.setItem('recipe', $(this).siblings('#raw-data').text())
+
+   });
+   
+
+
 
 class RecipeInfo extends Component {
     render(){
     return (
         <div className="container row">
             <h1 className="recipe-title">My Recipes</h1>
-            <p className="recipe-text">Here are your recipes</p>
             <div  className="recipe-results">
             </div>
         </div>

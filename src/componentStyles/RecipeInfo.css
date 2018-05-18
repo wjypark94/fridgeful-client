@@ -13,3 +13,95 @@
 .container {
     padding-top: 100px;
 }
+
+.acd-content {
+    display: none;
+    overflow: hidden;
+    padding: 10px;
+    font-size: 15px;
+    background-color: #f3f3f3;
+  }
+  .acd-content p {
+    color: black;
+  }
+
+  .btn {
+    display: block;
+    border: none;
+    outline: 0;
+    color: tan;
+    background-color: #333333;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    font-size: 17px;
+    position: relative;
+    margin-bottom: 7px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px black;
+  }
+  .btn:after {
+    color:tan;
+    font-weight: bold;
+    content: '\002B';
+    margin-left: 5px;
+    float: right;
+  }
+
+  .btn:hover {
+    color: gold;
+  }
+
+  .delete-btn,
+.edit-btn {
+    margin-bottom: 5px;
+    position: relative;
+    float: right;
+    bottom: -25px;
+    padding: 5px;
+    width: 150px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    background-color: #333333;
+    color: tan;
+    margin-right: 50px;
+    box-shadow: 0 0 5px black;
+}
+
+.delete-btn:hover,
+.edit-btn:hover {
+  color: gold;
+}
+
+.recipe-image {
+    height: 200px;
+    width: auto;
+    float: left;
+}
+
+p {
+    margin-left: 220px;
+}
+
+/******RESPONSIVE DESIGN CSS****/
+
+@media screen and (max-width: 645px){
+  .delete-btn,
+  .edit-btn {
+      margin-bottom: 5px;
+      position: relative;
+      float: right;
+      bottom: -5px;
+      padding: 5px;
+      width: 100px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border-radius: 5px;
+      background-color: #333333;
+      color: tan;
+      margin-right: 50px;
+      box-shadow: 0 0 5px black;
+  }
+
+}
