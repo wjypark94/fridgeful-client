@@ -70,6 +70,7 @@ function getRecipeEntries(callbackFn) {
   
           success: data => {
             console.log("it worked!")
+            window.location = 'recipes-page';
           }
         });
       });
