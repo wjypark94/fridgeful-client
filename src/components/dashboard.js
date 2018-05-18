@@ -44,7 +44,7 @@ class Dashboard extends Component {
 
                       <MenuItem containerElement={<Link to="/" />} id="home">Home</MenuItem>
                       <MenuItem containerElement={<Link to ="dashboard"/>} id="dashboard">Dashboard</MenuItem>
-                      <MenuItem containerElement={<Link to ="/recipes-page"/>} id="recipes">Recipes</MenuItem>
+                      <MenuItem onClick={() => window.location="/recipes-page"} containerElement={<Link to ="/recipes-page"/>} id="recipes">Recipes</MenuItem>
                       <MenuItem onClick={() => this.props.dispatch(logoutUser())} id="logout">Log Out</MenuItem>
                   </Drawer>
                   

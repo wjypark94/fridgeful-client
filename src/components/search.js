@@ -127,7 +127,7 @@ const Search = (props) => {
         <div className="dashboard-display">
             <header className="row">
                 <h1 className="logo">Fridgeful Dashboard</h1>
-                <p>Let's get started and search some recipes</p> 
+               
             </header>
             <form action="#" className="recipes-form" id="recipes-form">
                 <input type="text" placeholder="Enter ingredients.." aria-label="input" className="recipe-query" id="recipe-query"/>
