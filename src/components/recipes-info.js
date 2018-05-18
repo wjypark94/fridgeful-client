@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import '../componentStyles/RecipeInfo.css';
-import { connect } from 'react-redux';
 
 import $ from 'jquery';
 import { API_BASE_URL } from '../config';
