@@ -55,8 +55,32 @@ function getRecipeEntries(callbackFn) {
 
    });
    
+ //delete the brew entries
 
+ function deleteRecipeEntries(data) {
+    for (var i = 0; i < data.recipe.length; i++) {
+      $('.delete-btn').on('click', function(event) {
+        let recipeId = $(this).attr('id');
+        console.log(recipeId);
+        $.ajax({
+          url: `${API_BASE_URL}/recipelist/${recipeId}`,
+          type: 'DELETE',
+          dataType: 'json',
+          contentType: 'application/json',
+  
+          success: data => {
+            console.log("it worked!")
+          }
+        });
+      });
+    }
+  }
 
+  function getAndDeleteRecipeEntries() {
+    getRecipeEntries(deleteRecipeEntries);
+  }
+
+  $(getAndDeleteRecipeEntries);
 
 class RecipeInfo extends Component {
     render(){
