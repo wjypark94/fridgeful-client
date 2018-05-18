@@ -51,7 +51,7 @@ function getRecipeEntries(callbackFn) {
    
    $(document).on('click', '.edit-btn', function(event) {
     window.localStorage.setItem('recipe', $(this).siblings('#raw-data').text())
-
+    window.location = '/edit-form';
    });
    
  //delete the brew entries
