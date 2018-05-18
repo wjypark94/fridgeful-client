@@ -1,0 +1,47 @@
+* { 
+    box-sizing: border-box;
+}
+
+
+.new-recipe-form{
+    padding-top: 30px;
+    position: absolute;
+    width: 50%;
+    top: 50px;
+    left: 20px;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+
+button {
+    padding: 5px;
+    width: 152px;
+    margin-top: 40px;
+    padding-top: 10px;
+    padding-bottom: 7px;
+    border-radius: 7px;
+    margin-left: 10;
+    background-color: #333333;
+    color: tan;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 20px;
+  }
+
+.submit {
+    letter-spacing: 1px;
+}
+
+.submit {
+    font-size: 20px;
+    display: inline-block;
+  }
+
+  textarea {
+    border-radius: 5px;
+    border: solid 1px #c4c4c4;  
+    resize: none;
+    padding: 8px 10px;
+    overflow: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
