@@ -1,10 +1,10 @@
 import React from 'react';
 import $ from 'jquery';
-//import { API_BASE_URL } from '../config';
+import { API_BASE_URL } from '../config';
 
 //put request for updating recipe
-
-/*function updateRecipeRequest(id, title, content) {
+/*
+function updateRecipeRequest(id, title, content) {
     if (window.localStorage.getItem('recipe')) {
       console.log(id);
       console.log(title);
@@ -34,7 +34,7 @@ import $ from 'jquery';
 }
 //adding recipe with values in form
 
-/*function addNewRecipe() {
+function addNewRecipe() {
     if (window.localStorage.getItem('recipe')) {
       const recipe = JSON.parse(window.localStorage.getItem('recipe'));
       const recipeId = recipe.id;
@@ -46,8 +46,8 @@ import $ from 'jquery';
     }
   
   }
+*/
 
-  */
 //function for autofilling the form for recipes in the edit-form page
   function fillForm() {
 

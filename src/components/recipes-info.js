@@ -31,7 +31,6 @@ function getRecipeEntries(callbackFn) {
           <img class="recipe-image" src="${data.recipe[i].img}">
           <p class="recipe-content">${data.recipe[i].content}</p>
           <button id="${data.recipe[i].id}" class="delete-btn">Delete</button><button id="${data.recipe[i].id}" class="edit-btn">Edit</button>
-          <div id="raw-data" hidden>${JSON.stringify(data.recipe[i])}</div>
           </div>
         </div>
         `);
@@ -51,7 +50,7 @@ function getRecipeEntries(callbackFn) {
    
    $(document).on('click', '.edit-btn', function(event) {
     window.localStorage.setItem('recipe', $(this).siblings('#raw-data').text())
-    window.location = '/edit-form';
+    //window.location = '/edit-form';
    });
    
  //delete the brew entries
@@ -60,7 +59,7 @@ function getRecipeEntries(callbackFn) {
     for (var i = 0; i < data.recipe.length; i++) {
       $('.delete-btn').on('click', function(event) {
         let recipeId = $(this).attr('id');
-        console.log(recipeId);
+        //console.log(recipeId);
         $.ajax({
           url: `${API_BASE_URL}/recipelist/${recipeId}`,
           type: 'DELETE',
