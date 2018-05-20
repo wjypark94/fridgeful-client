@@ -95,4 +95,3 @@ class RecipeInfo extends Component {
 }
 
 export default RecipeInfo;
-

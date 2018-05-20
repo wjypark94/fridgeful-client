@@ -55,7 +55,7 @@ class LoginForm extends Component {
             open={this.state.open}
             autoScrollBodyContent={true}
           >
-          <h1 class="register-header">Create a username and password</h1>
+          <h1 className="register-header">Create a username and password</h1>
           <form onSubmit={(e) => {
                 e.preventDefault();
                 this.handleClose();
