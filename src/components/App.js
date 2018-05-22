@@ -5,7 +5,7 @@ import Home from './Home';
 import Dashboard from './dashboard';
 import RecipesPage from './recipes-page';
 import history from '../history';
-import Edit from './recipes-edit';
+
 
 import LoginForm from './login-form';
 import { loginUserSuccess } from '../actions';
@@ -30,7 +30,6 @@ class App extends Component {
             <Route exact path="/dashboard" component={Dashboard} />
             <Route exact path="/recipes-page" component={RecipesPage}/>
             <Route exact path="/login-form" component={LoginForm} />
-            <Route exact path="/edit-form" component={Edit}/>
           </div>
       </Router>
     );

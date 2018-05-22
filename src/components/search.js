@@ -35,7 +35,7 @@ const SEARCH_URL = "https://api.edamam.com/search";
                   }
                   $('#js-results').html(hitsHtml);
                   $('.save-button').on('click', function(e){
-                      console.log('Recipe saved!');
+                      console.log('Recipe saved!!!');
                       
                       var btn = e.target || e.srcElement;
                       const recipeTitle = btn.id;
@@ -44,6 +44,7 @@ const SEARCH_URL = "https://api.edamam.com/search";
                       console.log(img);
                       addNewRecipe(recipeTitle, img);
                   })
+                  
               }
               catch (e) {
                   console.log(e);
@@ -51,6 +52,7 @@ const SEARCH_URL = "https://api.edamam.com/search";
           }
         })
   };
+
 //display results from edamam api
   function displayResults(result){
       return `

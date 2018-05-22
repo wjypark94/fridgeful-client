@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import '../componentStyles/RecipeInfo.css';
-
 import $ from 'jquery';
 import { API_BASE_URL } from '../config';
 
@@ -21,7 +20,8 @@ function getRecipeEntries(callbackFn) {
        }
      });
    }
-  
+
+
    function displayRecipeEntries(data) {
     for (var i = 0; i < data.recipe.length; i++){
         $('.recipe-results').append(`
@@ -32,10 +32,10 @@ function getRecipeEntries(callbackFn) {
           <p class="recipe-content">${data.recipe[i].content}</p>
           <button id="${data.recipe[i].id}" class="delete-btn">Delete</button><button id="${data.recipe[i].id}" class="edit-btn">Edit</button>
           </div>
-          <form id="edit-form">
+          <form id="edit-form" class="edit-form">
             <h4 class="edit-form-title"> Any comments about this recipe? </h4>
             <input type="text" class="edit-form-input">
-            <button type="button" id="submit-edit" data-content="${data.recipe[i].content}"> Submit</button>
+            <button type="button" id="submit-edit" data-id="${data.recipe[i].id}" data-content="${data.recipe[i].content}"> Submit</button>
           </form>
         </div>
         `);
@@ -59,25 +59,33 @@ function getRecipeEntries(callbackFn) {
     $("#edit-form").toggle();
    });
 
-   $(document).on('click', '#submit-edit', function (e) {
+
+
+  
+$(document).on('click', '#submit-edit', function (e) {
     var btn = e.target;
-    let newContent = btn.getAttribute('data-content');
-    console.log(newContent);
+    let currentContent = btn.getAttribute('data-content');
+    let currentId = btn.getAttribute('data-id');
+    console.log(currentContent);
     const recipeContent = $('.edit-form-input').val().trim();
-    newContent = recipeContent;
-    console.log('this is the new '+ newContent);
+    console.log(recipeContent);
+    console.log('this is the new content: '+ recipeContent);
+    updateRecipeRequest(currentId, recipeContent);
     //addNewRecipe();
     //console.log(btn);
     //console.log(btn.id);
    });
 
-   
+   /*$(document).on('click', '#submit-edit', function(e){
+     console.log('this is pushing through')
+   })
+   */
+
+
    
 //edit the recipe entries
 
 function updateRecipeRequest(id, content) {
-  if (window.localStorage.getItem('recipe')) {
-
     $.ajax({
         method: 'PUT',
         url: `${API_BASE_URL}/recipelist/${id}`,
@@ -90,7 +98,7 @@ function updateRecipeRequest(id, content) {
         success: result => {
             try{
             console.log("it's updating!!!");
-           //window.location = "/recipes-page";
+           window.location = "/recipes-page";
             }
             catch(e){
                 console.log(e)
@@ -99,16 +107,19 @@ function updateRecipeRequest(id, content) {
         }        
     });
 }
-}
 
-function addNewRecipe(content) {
+function addNewRecipe() {
   if (window.localStorage.getItem('recipe')){
     const recipe = JSON.parse(window.localStorage.getItem('recipe'));
     const recipeId = recipe.id;
+    $(document).ready(function(){
     const recipeContent = $('.edit-form-input').val().trim();
     updateRecipeRequest(recipeId, recipeContent);
+    });
   }
 }
+
+
 
 
  //delete the brew entries
@@ -127,7 +138,7 @@ function addNewRecipe(content) {
   
           success: data => {
             console.log("it worked!")
-                    //window.location = 'recipes-page';
+                    window.location = 'recipes-page';
           }
         });
       });
@@ -139,6 +150,7 @@ function addNewRecipe(content) {
   }
 
   $(getAndDeleteRecipeEntries);
+
 
 class RecipeInfo extends Component {
     render(){
