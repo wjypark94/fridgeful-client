@@ -67,7 +67,6 @@ function getRecipeEntries(callbackFn) {
   
 $(document).on('click', '#submit-edit', function (e) {
     var btn = e.target;
-    let currentContent = btn.getAttribute('data-content');
     let currentId = btn.getAttribute('data-id');
     let currentTitle = btn.getAttribute('date-title');
     //console.log(currentContent);
