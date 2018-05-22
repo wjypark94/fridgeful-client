@@ -3,6 +3,7 @@ import '../componentStyles/RecipeInfo.css';
 import $ from 'jquery';
 import { API_BASE_URL } from '../config';
 
+//GET RECIPE ENTRIES
 function getRecipeEntries(callbackFn) {
      $.ajax({
        url: `${API_BASE_URL}/recipelist/user/${localStorage.getItem('userId')}`,
@@ -53,6 +54,8 @@ function getRecipeEntries(callbackFn) {
     $(this).toggleClass("max").next().slideToggle(500);
    });
    
+
+   //EDIT RECIPE ENTRIES
    $(document).on('click', '.edit-btn', function(event) {
     window.localStorage.setItem('recipe', $(this).siblings('#raw-data').text())
     //window.location = '/edit-form';
@@ -83,7 +86,6 @@ $(document).on('click', '#submit-edit', function (e) {
 
 
    
-//edit the recipe entries
 
 function updateRecipeRequest(id, content) {
     $.ajax({
@@ -107,19 +109,6 @@ function updateRecipeRequest(id, content) {
         }        
     });
 }
-
-function addNewRecipe() {
-  if (window.localStorage.getItem('recipe')){
-    const recipe = JSON.parse(window.localStorage.getItem('recipe'));
-    const recipeId = recipe.id;
-    $(document).ready(function(){
-    const recipeContent = $('.edit-form-input').val().trim();
-    updateRecipeRequest(recipeId, recipeContent);
-    });
-  }
-}
-
-
 
 
  //delete the brew entries
