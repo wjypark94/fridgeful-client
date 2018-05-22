@@ -32,12 +32,12 @@ function getRecipeEntries(callbackFn) {
           <img class="recipe-image" src="${data.recipe[i].img}">
           <p class="recipe-content">${data.recipe[i].content}</p>
           <button id="${data.recipe[i].id}" class="delete-btn">Delete</button><button id="${data.recipe[i].id}" class="edit-btn">Edit</button>
+        <form id="edit-form" class="edit-form">
+          <h4 class="edit-form-title"> Any comments about this recipe? </h4>
+          <input type="text" class="edit-form-input">
+          <button type="button" id="submit-edit" data-title="${data.recipe[i].title}" data-id="${data.recipe[i].id}" data-content="${data.recipe[i].content}"> Submit</button>
+        </form>
           </div>
-          <form id="edit-form" class="edit-form">
-            <h4 class="edit-form-title"> Any comments about this recipe? </h4>
-            <input type="text" class="edit-form-input">
-            <button type="button" id="submit-edit" data-id="${data.recipe[i].id}" data-content="${data.recipe[i].content}"> Submit</button>
-          </form>
         </div>
         `);
     }
@@ -50,7 +50,7 @@ function getRecipeEntries(callbackFn) {
   $(getAndDisplayRecipeEntries);
 
    
-   $(document).on('click', 'button', function () {
+   $(document).on('click', '.btn', function () {
     $(this).toggleClass("max").next().slideToggle(500);
    });
    
@@ -69,11 +69,14 @@ $(document).on('click', '#submit-edit', function (e) {
     var btn = e.target;
     let currentContent = btn.getAttribute('data-content');
     let currentId = btn.getAttribute('data-id');
-    console.log(currentContent);
+    let currentTitle = btn.getAttribute('date-title');
+    //console.log(currentContent);
     const recipeContent = $('.edit-form-input').val().trim();
-    console.log(recipeContent);
-    console.log('this is the new content: '+ recipeContent);
-    updateRecipeRequest(currentId, recipeContent);
+    //console.log(recipeContent);
+    //console.log('this is the new content: '+ recipeContent);
+    //console.log(currentId);
+    
+    updateRecipeRequest(currentId, currentTitle, recipeContent);
     //addNewRecipe();
     //console.log(btn);
     //console.log(btn.id);
@@ -87,12 +90,15 @@ $(document).on('click', '#submit-edit', function (e) {
 
    
 
-function updateRecipeRequest(id, content) {
+function updateRecipeRequest(id, title, content) {
+
+
     $.ajax({
         method: 'PUT',
         url: `${API_BASE_URL}/recipelist/${id}`,
         data: JSON.stringify({
           id: id,
+          title: title,
           content: content,
         }),
         contentType: 'application/json',
