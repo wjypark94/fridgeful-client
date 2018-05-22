@@ -32,6 +32,11 @@ function getRecipeEntries(callbackFn) {
           <p class="recipe-content">${data.recipe[i].content}</p>
           <button id="${data.recipe[i].id}" class="delete-btn">Delete</button><button id="${data.recipe[i].id}" class="edit-btn">Edit</button>
           </div>
+          <form id="edit-form">
+            <h4 class="edit-form-title"> Any comments about this recipe? </h4>
+            <input type="text" class="edit-form-input">
+            <button type="button" id="submit-edit" data-content="${data.recipe[i].content}"> Submit</button>
+          </form>
         </div>
         `);
     }
@@ -51,14 +56,68 @@ function getRecipeEntries(callbackFn) {
    $(document).on('click', '.edit-btn', function(event) {
     window.localStorage.setItem('recipe', $(this).siblings('#raw-data').text())
     //window.location = '/edit-form';
+    $("#edit-form").toggle();
    });
+
+   $(document).on('click', '#submit-edit', function (e) {
+    var btn = e.target;
+    let newContent = btn.getAttribute('data-content');
+    console.log(newContent);
+    const recipeContent = $('.edit-form-input').val().trim();
+    newContent = recipeContent;
+    console.log('this is the new '+ newContent);
+    //addNewRecipe();
+    //console.log(btn);
+    //console.log(btn.id);
+   });
+
    
+   
+//edit the recipe entries
+
+function updateRecipeRequest(id, content) {
+  if (window.localStorage.getItem('recipe')) {
+
+    $.ajax({
+        method: 'PUT',
+        url: `${API_BASE_URL}/recipelist/${id}`,
+        data: JSON.stringify({
+          id: id,
+          content: content,
+        }),
+        contentType: 'application/json',
+        dataType: 'json',
+        success: result => {
+            try{
+            console.log("it's updating!!!");
+           //window.location = "/recipes-page";
+            }
+            catch(e){
+                console.log(e)
+                console.log('its not working');
+            }
+        }        
+    });
+}
+}
+
+function addNewRecipe(content) {
+  if (window.localStorage.getItem('recipe')){
+    const recipe = JSON.parse(window.localStorage.getItem('recipe'));
+    const recipeId = recipe.id;
+    const recipeContent = $('.edit-form-input').val().trim();
+    updateRecipeRequest(recipeId, recipeContent);
+  }
+}
+
+
  //delete the brew entries
 
  function deleteRecipeEntries(data) {
     for (var i = 0; i < data.recipe.length; i++) {
       $('.delete-btn').on('click', function(event) {
         let recipeId = $(this).attr('id');
+
         //console.log(recipeId);
         $.ajax({
           url: `${API_BASE_URL}/recipelist/${recipeId}`,
@@ -68,7 +127,7 @@ function getRecipeEntries(callbackFn) {
   
           success: data => {
             console.log("it worked!")
-            window.location = 'recipes-page';
+                    //window.location = 'recipes-page';
           }
         });
       });

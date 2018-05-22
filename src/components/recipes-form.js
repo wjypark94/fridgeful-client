@@ -87,7 +87,7 @@ const Form = (props) => {
                 </div>
             </form>
 
-                <button type="submit" className="testing">Testing</button>
+
                 
         </div>
         </div>

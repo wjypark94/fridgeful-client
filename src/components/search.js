@@ -115,7 +115,7 @@ function postRecipeRequest(userId, title, img, content){
 function addNewRecipe(recipeTitle, img){
     const userId = localStorage.getItem('userId');
     //console.log("hello we are adding a new recipe");
-    const content = "Write any comments here";
+    const content = "Write any comments here please";
     postRecipeRequest(userId, recipeTitle, img, content);
 }
 

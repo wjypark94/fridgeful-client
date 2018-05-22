@@ -20,6 +20,7 @@
     padding: 10px;
     font-size: 15px;
     background-color: #f3f3f3;
+    padding-bottom: 35px;
   }
   .acd-content p {
     color: black;
@@ -80,6 +81,20 @@
     float: left;
 }
 
+/*****/
+
+#edit-form{
+    display: none;
+}
+
+.edit-form-title{
+    font-size: 15px;
+    
+}
+
+#submit-edit{
+    margin-top: 5px;
+}
 
 /******RESPONSIVE DESIGN CSS****/
 
@@ -102,3 +117,4 @@
   }
 
 }
+
