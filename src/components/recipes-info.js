@@ -32,12 +32,13 @@ function getRecipeEntries(callbackFn) {
           <img class="recipe-image" src="${data.recipe[i].img}">
           <p class="recipe-content">${data.recipe[i].content}</p>
           <button id="${data.recipe[i].id}" class="delete-btn">Delete</button><button id="${data.recipe[i].id}" class="edit-btn">Edit</button>
-        <form id="edit-form" class="edit-form">
+  
+          </div>
+        <form id="${data.recipe[i].id}-edit" class="edit-form">
           <h4 class="edit-form-title"> Any comments about this recipe? </h4>
-          <input type="text" class="edit-form-input">
+          <input type="text" class="edit-form-input" id="${data.recipe[i].id}-comment">
           <button type="button" id="submit-edit" data-title="${data.recipe[i].title}" data-id="${data.recipe[i].id}" data-content="${data.recipe[i].content}"> Submit</button>
         </form>
-          </div>
         </div>
         `);
     }
@@ -57,9 +58,12 @@ function getRecipeEntries(callbackFn) {
 
    //EDIT RECIPE ENTRIES
    $(document).on('click', '.edit-btn', function(event) {
-    window.localStorage.setItem('recipe', $(this).siblings('#raw-data').text())
+    //window.localStorage.setItem('recipe', $(this).siblings('#raw-data').text())
     //window.location = '/edit-form';
-    $("#edit-form").toggle();
+    var btn = event.target;
+    let currentId = btn.getAttribute('id');
+    console.log(currentId);
+    $("#"+ currentId + "-edit").toggle();
    });
 
 
@@ -70,10 +74,11 @@ $(document).on('click', '#submit-edit', function (e) {
     let currentId = btn.getAttribute('data-id');
     let currentTitle = btn.getAttribute('date-title');
     //console.log(currentContent);
-    const recipeContent = $('.edit-form-input').val().trim();
-    //console.log(recipeContent);
+    const recipeContent = $("#" + currentId + "-comment").val().trim();
+
+    console.log(recipeContent);
     //console.log('this is the new content: '+ recipeContent);
-    //console.log(currentId);
+    console.log(currentId);
     
     updateRecipeRequest(currentId, currentTitle, recipeContent);
     //addNewRecipe();
