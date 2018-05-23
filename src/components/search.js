@@ -1,8 +1,6 @@
 import React from 'react';
 import '../componentStyles/Search.css';
 import $ from 'jquery';
-
-import { API_BASE_URL } from '../config';
 import { addRecipe } from '../actions';
 
 const API_KEY = "05657dfe9f118702432a2379f889bdf2";

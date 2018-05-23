@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import '../componentStyles/RecipeInfo.css';
 import $ from 'jquery';
-import { API_BASE_URL } from '../config';
+
 import { getRecipeEntries } from '../actions';
 import { updateRecipeRequest } from '../actions';
 import { deleteRecipeEntries } from '../actions';

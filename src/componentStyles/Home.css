@@ -21,14 +21,10 @@
     position: absolute;
 }
 
-.arrow{
-    display: block;
-    border-color: transparent;
-    border-style: solid;
-    height: 0;
-    margin: 20em auto;
-    opacity: 0.8;
-    text-align: center;
+.arrow {
+    border-color:transparent;
     color: black;
-  
-}
+    display:block;
+    margin-top: 220px;
+  }
+

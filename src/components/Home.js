@@ -44,7 +44,7 @@ class Home extends Component{
                   </Drawer>
                   
                     <div className="container">
-                        <a href="#about-section" className="arrow down">Down</a>
+                        <a href="#about-section" className="arrow down"> Learn more and get started</a>
                     </div>
                 </div>
 
