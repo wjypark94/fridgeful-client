@@ -2,28 +2,26 @@ import React, {Component} from 'react';
 import '../componentStyles/RecipeInfo.css';
 import $ from 'jquery';
 import { API_BASE_URL } from '../config';
+import { getRecipeEntries } from '../actions';
+import { updateRecipeRequest } from '../actions';
+import { deleteRecipeEntries } from '../actions';
+
+
+class RecipeInfo extends Component {
+    render(){
+    return (
+        <div className="container row">
+            <h1 className="recipe-title">My Recipes</h1>
+            <div  className="recipe-results">
+            </div>
+        </div>
+    )
+ }
+}
 
 //GET RECIPE ENTRIES
-function getRecipeEntries(callbackFn) {
-     $.ajax({
-       url: `${API_BASE_URL}/recipelist/user/${localStorage.getItem('userId')}`,
-       type: 'GET',
-       dataType: 'json',
-   
-       success: data => {
-         if(data) {
-           let results = data;
-          //console.log('we are getting the data!')
-           //console.log(results);
-           callbackFn(results);
-          //console.log(data.recipe);     
-         }
-       }
-     });
-   }
 
-
-   function displayRecipeEntries(data) {
+function displayRecipeEntries(data) {
     for (var i = 0; i < data.recipe.length; i++){
         $('.recipe-results').append(`
         <div class="col-8" id="${data.recipe[i].id}">
@@ -66,83 +64,18 @@ function getRecipeEntries(callbackFn) {
     $("#"+ currentId + "-edit").toggle();
    });
 
-
-
-  
 $(document).on('click', '#submit-edit', function (e) {
     var btn = e.target;
     let currentId = btn.getAttribute('data-id');
     let currentTitle = btn.getAttribute('date-title');
-    //console.log(currentContent);
     const recipeContent = $("#" + currentId + "-comment").val().trim();
-
     console.log(recipeContent);
     //console.log('this is the new content: '+ recipeContent);
     console.log(currentId);
-    
     updateRecipeRequest(currentId, currentTitle, recipeContent);
-    //addNewRecipe();
-    //console.log(btn);
-    //console.log(btn.id);
    });
 
-   /*$(document).on('click', '#submit-edit', function(e){
-     console.log('this is pushing through')
-   })
-   */
-
-
-   
-
-function updateRecipeRequest(id, title, content) {
-
-
-    $.ajax({
-        method: 'PUT',
-        url: `${API_BASE_URL}/recipelist/${id}`,
-        data: JSON.stringify({
-          id: id,
-          title: title,
-          content: content,
-        }),
-        contentType: 'application/json',
-        dataType: 'json',
-        success: result => {
-            try{
-            console.log("it's updating!!!");
-           window.location = "/recipes-page";
-            }
-            catch(e){
-                console.log(e)
-                console.log('its not working');
-            }
-        }        
-    });
-}
-
-
- //delete the brew entries
-
- function deleteRecipeEntries(data) {
-    for (var i = 0; i < data.recipe.length; i++) {
-      $('.delete-btn').on('click', function(event) {
-        let recipeId = $(this).attr('id');
-
-        //console.log(recipeId);
-        $.ajax({
-          url: `${API_BASE_URL}/recipelist/${recipeId}`,
-          type: 'DELETE',
-          dataType: 'json',
-          contentType: 'application/json',
-  
-          success: data => {
-            console.log("it worked!")
-                    window.location = 'recipes-page';
-          }
-        });
-      });
-    }
-  }
+ //delete the recipe entries
 
   function getAndDeleteRecipeEntries() {
     getRecipeEntries(deleteRecipeEntries);
@@ -150,17 +83,5 @@ function updateRecipeRequest(id, title, content) {
 
   $(getAndDeleteRecipeEntries);
 
-
-class RecipeInfo extends Component {
-    render(){
-    return (
-        <div className="container row">
-            <h1 className="recipe-title">My Recipes</h1>
-            <div  className="recipe-results">
-            </div>
-        </div>
-    )
- }
-}
 
 export default RecipeInfo;
