@@ -43,9 +43,6 @@ class Home extends Component{
                       <RegistrationForm/>
                   </Drawer>
                   
-                    <div className="container">
-                        <a href="#about-section" className="arrow down"> Learn more and get started</a>
-                    </div>
                 </div>
 
                 <div id="about-section" className="instructions-display">

@@ -3,7 +3,7 @@ import '../componentStyles/Header.css';
 
 const Header = (props) => {
     return (
-        <div className="container">
+        <div className="container-header">
             <div className="js-start-display" id="start-page">
                 <header className="row">
                     <h1 className="logo">Fridgeful</h1>
