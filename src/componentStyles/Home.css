@@ -7,8 +7,17 @@
     font-family: 'Roboto', sans-serif;
     position: relative;
     min-height: 400px;
+   
+    background: url('https://arteagas.com/wp-content/uploads/2017/11/Arteagas-Mexican-Grocery-Store-Background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
+/*background: url('http://janeyholliday.com/wp-content/uploads/2014/07/Chopping-Board-HIgh-Res-Image-1014x487.jpg');
+http://www.lebistrotdarthur.fr/v2/wp-content/uploads/2015/12/pgmvtg2ha1c72fci4wroqtguaxaqzrcgnse82yop7njq4i0mjjbbql68y7xa0he0-f.jpg
+https://arteagas.com/wp-content/uploads/2017/11/Arteagas-Mexican-Grocery-Store-Background.jpg
+*/
 .instructions-display{
     background-color: white;
 }
