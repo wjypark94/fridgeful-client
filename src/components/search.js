@@ -12,7 +12,7 @@ const Search = (props) => {
     return (
         <div className="dashboard-display">
             <header className="row">
-                <h1 className="logo">Fridgeful Dashboard</h1>
+                <h1 className="search-logo">Fridgeful Dashboard</h1>
                
             </header>
             <form action="#" className="recipes-form" id="recipes-form">

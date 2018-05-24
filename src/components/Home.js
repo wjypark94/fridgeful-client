@@ -22,7 +22,7 @@ class Home extends Component{
     render(){
         return (
             <div>
-                <div className="main-display">
+                <div className="main-home-display">
                 <AppBar
                       iconClassNameRight="muidocs-icon-navigation-expand-more"
                       title="Fridgeful"

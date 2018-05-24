@@ -31,12 +31,6 @@ font-size: 18px;
 }
 
 
-
-h1.logo {
-
-  font-family: 'Homenaje';
-}
-
 /*******/
 
 
@@ -67,4 +61,20 @@ h1.logo {
 .save-button{
   border: none;
   font-weight: bold;
+}
+
+.search-logo{
+  color: black;
+}
+
+.submit-button{
+  font-family: 'Amatic SC';
+  margin-bottom: 25px;
+  font-size: 25px;
+  background-color: #333333;
+  width: 130px;
+  padding: 5px;
+  box-shadow: 0 0 5px black;
+  color: tan;
+  border-radius: 5px;
 }

@@ -40,7 +40,7 @@ class Dashboard extends Component {
                       open={this.state.open}
                       onRequestChange={(open) => this.setState({open})}>
 
-                      <AppBar title="Fridgeful" style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19)', backgroundColor: 'dimgrey'}} />
+                      <AppBar title="Fridgeful" style={{boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19)', backgroundColor: 'black'}} />
 
                       <MenuItem containerElement={<Link to="/" />} id="home">Home</MenuItem>
                       <MenuItem containerElement={<Link to ="dashboard"/>} id="dashboard">Dashboard</MenuItem>

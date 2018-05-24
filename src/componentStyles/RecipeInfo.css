@@ -4,6 +4,7 @@
 
 .recipe-title{
     text-align: center;
+    color: black;
 }
 
 .recipe-text{
@@ -95,6 +96,30 @@
 
 #submit-edit{
     margin-top: 5px;
+}
+
+.recipe-content{
+    font-family: 'Amatic SC';
+    font-size: 30px;
+    padding-left: 250px;
+}
+
+.edit-form-title{
+    font-family: 'Amatic SC';
+    margin-top: 60px;
+    font-size: 25px;
+}
+
+#submit-edit{
+    font-family: 'Amatic SC';
+    margin-bottom: 25px;
+    font-size: 25px;
+    background-color: #333333;
+    width: 130px;
+    padding: 5px;
+    box-shadow: 0 0 5px black;
+    color: tan;
+    border-radius: 5px;
 }
 
 /******RESPONSIVE DESIGN CSS****/
