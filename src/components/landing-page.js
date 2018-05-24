@@ -12,4 +12,5 @@ export default function LandingPage(){
             <LoginButton/>
         </div>
     );
+    
 };

@@ -1,14 +1,17 @@
 import React from 'react';
 import '../componentStyles/AboutSection.css';
 import '../componentStyles/float-grid.css';
+import HowIcon from '../images/howitworks-icon.png';
+import DataBaseIcon from '../images/database-icon.png';
+import RecipeIcon from '../images/recipe-icon.png';
+import RegisterIcon from '../images/register-icon.png';
 
 const AboutSection = (props) => {
     return (
         <div className="about-row">
             <div className="col-12">
                 <div className="about-text">
-                    <h4>HOW IT WORKS</h4>
-
+                    <h4 className="about-h4"> HOW IT WORKS <img className="about-icon" src={HowIcon} alt="how-icon"/> </h4>
                 </div>
 
                 <div className="col-4 description">
@@ -16,6 +19,7 @@ const AboutSection = (props) => {
                         <p className="paragraph">
                             Sign up and create your own personal account with a few easy steps.
                         </p>
+                        <img className="register-icon" src={RegisterIcon} alt="register-icon"/>
                     </div>
                 </div>
 
@@ -27,12 +31,14 @@ const AboutSection = (props) => {
                         <p className="paragraph">
                             Enter a list of ingredients in the dashboard to search possible recipes.
                         </p>
+                        <img className="recipe-icon" src={RecipeIcon} alt="recipe-icon"/>
                     </div>
                 </div>
 
                 <div className="col-4 description">
                     <p className="paragraph">
                         Save your recipes to your own database and write your own comments or notes about that recipe!
+                        <img className="database-icon" src={DataBaseIcon} alt="how-icon"/>
                     </p>
                 </div>
 

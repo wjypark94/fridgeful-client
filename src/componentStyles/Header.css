@@ -4,30 +4,37 @@
 
 .container-header{
     text-align: center;
-    padding: 0px;
+    padding: 120px;
 }
 
 .js-start-display {
     filter: brightness(100%);
-    margin-bottom: 45px;
-    padding-top: 15px;
+    margin-bottom: 400px;
 }
 
 header {
     padding: 10px;
     border-radius: 10px;
     color: white;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 55%;
+    border-radius: 10px;
+
+
 }
 
 h1{
-    font-size: 70px;
-    margin-top: 30px;
-    text-shadow: 3px 3px black;
+    font-size: 100px;
+    color: white;
+
 }
 
 .header-p{
-    font-size: 17.5px;
-    text-shadow: 2px 2px black;
+    font-size: 30px;
+    text-shadow: 2px 2px white;
+    font-family: 'Amatic SC';
+    padding-bottom: 10px;
+    color: black;
 }
 
 .learn-more-button{
@@ -41,4 +48,10 @@ h1{
     font-size: 18px;
     margin-top: -20px;
     color: white;
+}
+
+.logo-h1{
+    font-size: 80px;
+    color: black;
+    font-family: 'Amatic SC';
 }

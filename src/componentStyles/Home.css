@@ -4,10 +4,7 @@
 }
 
 .main-display{
-    font-family: 'Roboto', sans-serif;
-    position: relative;
-    min-height: 400px;
-   
+    font-family: 'Roboto', sans-serif;   
     background: url('https://arteagas.com/wp-content/uploads/2017/11/Arteagas-Mexican-Grocery-Store-Background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -20,4 +17,3 @@ https://arteagas.com/wp-content/uploads/2017/11/Arteagas-Mexican-Grocery-Store-B
 */
 
 
- 

@@ -6,7 +6,7 @@ const Header = (props) => {
         <div className="container-header">
             <div className="js-start-display" id="start-page">
                 <header className="row">
-                    <h1 className="logo">Fridgeful</h1>
+                    <h1 className="logo-h1">Fridgeful</h1>
                     <p className="header-p">Find recipes based on what's in your fridge!</p>
                 </header>
             </div>
