@@ -4,29 +4,36 @@ import '../componentStyles/float-grid.css';
 
 const AboutSection = (props) => {
     return (
-        <div className="row">
-            <div className="display-container">
-                <h1 className="title">How It Works</h1>
+        <div className="about-row">
+            <div className="col-12">
+                <div className="about-text">
+                    <h4>HOW IT WORKS</h4>
 
-                <div className="col-4">
-                    <div className="box about">
-                        <h2 className="card-title">About</h2>
-                        <p className="card-section">Fridgeful will help you search recipes with ingredients in your fridge</p>
+                </div>
+
+                <div className="col-4 description">
+                    <div className="description-paragraph-1">
+                        <p className="paragraph">
+                            Sign up and create your own personal account with a few easy steps.
+                        </p>
                     </div>
                 </div>
 
-                <div className="col-4">
-                    <div className="box how-to">
-                        <h2 className="card-title">How To</h2>
-                        <p className="card-section">First, sign up and then add your recipes in the dashboard. Then, browse the recipes and add the recipes. </p>
+                <div className="col-4 description">
+                    <div className="image-wrapper">
+                    </div>
+
+                    <div className="description-paragraph-2">
+                        <p className="paragraph">
+                            Enter a list of ingredients in the dashboard to search possible recipes.
+                        </p>
                     </div>
                 </div>
 
-                <div className="col-4">
-                    <div className="box get-started">
-                        <h2 className="card-title">Get Started!</h2>
-                        <p className="card-section">Create a free account now and get started!</p>
-                    </div>
+                <div className="col-4 description">
+                    <p className="paragraph">
+                        Save your recipes to your own database and write your own comments or notes about that recipe!
+                    </p>
                 </div>
 
             </div>

@@ -1,49 +1,14 @@
-*{
+* {
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-
-}
-
-.box {
-    text-align: center;
-    height: 300px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    padding-top: 40px;
-    margin-left: 15px;
-    margin-right: 15px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
-    color: #212121;
   }
 
-  .about {
-      background-color: grey;
-  }
-
-  .how-to{
-      background-color: grey;
-  }
-
-  .get-started{
-      background-color: grey;
-  }
-
-  .title{
+  .about-text{
       text-align: center;
-      margin-top: 40px;
-      font-size: 40px;
-      font-weight: bold;
-      color: black;
   }
 
-  .card-content{
+  .about-row{
+      width: 100%;
+      height: 100%;
       text-align: center;
-      padding: -100px;
-      font-weight: bold;
-  }
-
-  .card-title{
-      font-size: 25px;
-      font-weight: bold;
+      
   }
