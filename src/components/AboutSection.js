@@ -38,8 +38,8 @@ const AboutSection = (props) => {
                 <div className="col-4 description">
                     <p className="paragraph">
                         Save your recipes to your own database and write your own comments or notes about that recipe!
-                        <img className="database-icon" src={DataBaseIcon} alt="how-icon"/>
                     </p>
+                    <img className="database-icon" src={DataBaseIcon} alt="how-icon"/>
                 </div>
 
             </div>

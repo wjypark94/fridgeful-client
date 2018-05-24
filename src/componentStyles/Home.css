@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+.app-bar {
+    position: fixed !important;
+  }
+
 .main-display{
     font-family: 'Roboto', sans-serif;   
     background: url('https://arteagas.com/wp-content/uploads/2017/11/Arteagas-Mexican-Grocery-Store-Background.jpg');
@@ -16,4 +20,7 @@ http://www.lebistrotdarthur.fr/v2/wp-content/uploads/2015/12/pgmvtg2ha1c72fci4wr
 https://arteagas.com/wp-content/uploads/2017/11/Arteagas-Mexican-Grocery-Store-Background.jpg
 */
 
+.instructions-display {
+    background-color: #f2f2f2 !important;
+  }
 
