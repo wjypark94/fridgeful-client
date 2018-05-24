@@ -9,7 +9,7 @@ import MenuItem from 'material-ui/MenuItem'
 import { connect } from 'react-redux';
 import { registerUser } from '../actions';
 
-class LoginForm extends Component {
+class RegistrationForm extends Component {
   constructor(props) {
       super(props);
       this.state = {
@@ -78,4 +78,4 @@ class LoginForm extends Component {
   }
 }
 
-export default connect()(LoginForm);
+export default connect()(RegistrationForm );

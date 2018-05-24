@@ -5,8 +5,6 @@ import Home from './Home';
 import Dashboard from './dashboard';
 import RecipesPage from './recipes-page';
 import history from '../history';
-
-
 import LoginForm from './login-form';
 import { loginUserSuccess } from '../actions';
 import { connect } from 'react-redux';
