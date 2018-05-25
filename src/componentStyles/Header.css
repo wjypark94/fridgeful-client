@@ -24,7 +24,7 @@
     color: white;
     font-size: 20px;
     font-family: 'Homenaje';
-
+    letter-spacing: 1.5px;
 }
 
 header {
@@ -50,6 +50,7 @@ h1{
     font-family: 'Amatic SC';
     padding-bottom: 10px;
     color: black;
+    letter-spacing: 1.0px;
 }
 
 .learn-more-button{
@@ -69,4 +70,5 @@ h1{
     font-size: 80px;
     color: black;
     font-family: 'Amatic SC';
+    letter-spacing: 1.0px;
 }

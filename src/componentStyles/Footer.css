@@ -1,0 +1,59 @@
+footer{
+    background-color: #3D3D3D;
+    width: 100%;
+    padding: 6px 6px;
+}
+
+.contacts-info{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.contacts-info ul {
+    display: flex;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    flex-direction: row;
+
+}
+
+.contacts-info li {
+    width: 33%;
+}
+
+.contacts-info span{
+    color: #d8d8d8;
+    font-size: 2em;
+}
+
+.copyright{
+    text-align: center;
+    color: #d8d8d8;
+    margin-top: 45px;
+    font-family: 'Amatic SC';
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+
+.copyright span {
+    padding-right: 3px;
+}
+
+.contacts-info span:hover{
+    color: #ffffff;
+}
+
+.footer-title h4{
+    float: none;
+    color: #6B6B6B;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    font-family: 'Amatic SC';
+    
+}
+
+.footer-title img{
+    float: left;
+    width: 5%;
+}

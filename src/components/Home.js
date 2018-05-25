@@ -7,6 +7,7 @@ import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import RegistrationForm from './sign-up-form';
 import { Link } from 'react-router-dom';
+import Footer from './Footer';
 
 
 class Home extends Component{ 
@@ -47,6 +48,10 @@ class Home extends Component{
 
                 <div id="about-section" className="instructions-display">
                     <AboutSection/>
+                </div>
+                
+                <div>
+                    <Footer/>
                 </div>
             </div>
         );
