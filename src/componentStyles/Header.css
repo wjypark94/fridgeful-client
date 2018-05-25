@@ -29,7 +29,6 @@
 
 header {
     padding: 10px;
-    border-radius: 10px;
     color: white;
     background-color: rgba(255, 255, 255, 0.7);
     width: 55%;
@@ -72,3 +71,99 @@ h1{
     font-family: 'Amatic SC';
     letter-spacing: 1.0px;
 }
+
+/*** RESPONSIVE DESIGN FOR HEADER CONTAINER***/
+
+
+
+@media screen and (min-width: 50px) {
+    header {
+      padding: 20px;
+      color: white;
+      background-color: rgba(255, 255, 255, 0.7);
+      width: 120%;
+      border-radius: 10px;
+     }
+    }
+  
+@media screen and (min-width: 670px) {
+      header {
+          padding: 10px;
+          color: white;
+          background-color: rgba(255, 255, 255, 0.7);
+          width: 55%;
+          border-radius: 10px;
+      }
+  }
+
+@media screen and (min-width: 50px) {
+    .logo-h1{
+        font-size: 60px;
+        color: black;
+        font-family: 'Amatic SC';
+        letter-spacing: 1.0px;
+    }  
+}
+
+
+@media screen and (min-width: 50px) {
+    .header-p{
+        font-size: 20px;
+        text-shadow: 2px 2px white;
+        font-family: 'Amatic SC';
+        padding-bottom: 10px;
+        color: black;
+        letter-spacing: 1.0px;
+    }
+}
+
+@media screen and (min-width: 670px) {
+      header {
+          padding: 10px;
+          color: white;
+          background-color: rgba(255, 255, 255, 0.7);
+          width: 55%;
+          border-radius: 10px;
+      }
+  }
+
+/*** RESPONSIVE DESIGN FOR LEARN MORE BUTTON***/
+
+  @media screen and (min-width: 50px) {
+    .start-button{
+        margin-bottom: 400px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 200px;
+        background-color: #333333;
+        border-radius: 6px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border: none;
+        color: white;
+        font-size: 15px;
+        font-family: 'Homenaje';
+        letter-spacing: 1.5px;
+    }
+    
+}
+
+@media screen and (min-width: 670px) {
+    .start-button{
+        margin-bottom: 400px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 250px;
+        background-color: #333333;
+        border-radius: 6px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border: none;
+        color: white;
+        font-size: 20px;
+        font-family: 'Homenaje';
+        letter-spacing: 1.5px;
+    }
+}
+
+
+
+ 
