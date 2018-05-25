@@ -16,17 +16,18 @@ export default function Footer(){
                     <li className="">
                         <a href="https://github.com/wjypark94" target="blank" name="github">
                             <FontAwesome name="github"/>
-                            
                         </a>
                     </li>
                     <li className="contacts-info">
-                        <a href="https://www.linkedin.com/in/wjypark/" target="blank" name="linkedin"></a>
+                        <a href="https://www.linkedin.com/in/wjypark/" target="blank" name="linkedin">
                             <FontAwesome name="linkedin"/>
+                        </a>
                           
                     </li>
                     <li>
-                        <a href="mailto:wjypark94@gmail.com" target="blank" name="email-info"></a>
+                        <a href="mailto:wjypark94@gmail.com" target="blank" name="email-info">
                             <FontAwesome name="envelope"/>
+                        </a>
                     </li>
                 </ul>
             </div>
