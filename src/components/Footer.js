@@ -20,7 +20,7 @@ export default function Footer(){
                         </a>
                     </li>
                     <li className="contacts-info">
-                        <a href="https://www.linkedin.com/in/wjypark/" target="blank" rel="noopener noreferrer" name="linkedin"></a>
+                        <a href="https://www.linkedin.com/in/wjypark/" target="blank" name="linkedin"></a>
                             <FontAwesome name="linkedin"/>
                           
                     </li>
