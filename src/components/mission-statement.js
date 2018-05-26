@@ -55,6 +55,7 @@ export default class MissionStatement extends Component {
                     <i onClick={this.scrollToTop} class="fa fa-arrow-circle-up smooth-container" aria-hidden="true"></i>
                 </a>
             </div>
+            <hr className="mission-hr"/>
         </div>
         );
     }

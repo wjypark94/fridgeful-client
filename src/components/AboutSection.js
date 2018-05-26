@@ -55,7 +55,7 @@ export default class AboutSection extends Component {
                     <i onClick={this.scrollToMission} class="fa fa-arrow-circle-down smooth-container" aria-hidden="true"></i>
                 </a>
             </div>
-
+            <hr className="about-hr"/>
         </div>
         );
     }
