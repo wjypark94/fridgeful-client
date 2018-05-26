@@ -10,7 +10,7 @@ import {animateScroll as scroll} from 'react-scroll';
 export default class AboutSection extends Component {
 
     scrollToMission(){
-        scroll.scrollTo(2150);
+        scroll.scrollTo(1600);
     }
 
     render(){
@@ -23,8 +23,8 @@ export default class AboutSection extends Component {
 
                 <div className="col-4 description">
                     <div className="description-paragraph-1">
-                        <p className="paragraph">
-                            Sign up and create your own personal account with a few easy steps.
+                        <p className="about-paragraph">
+                            Sign up and create your own personal account with a few easy steps. Hit the handle bar to register.
                         </p>
                         <img className="register-icon" src={RegisterIcon} alt="register-icon"/>
                     </div>
@@ -35,24 +35,24 @@ export default class AboutSection extends Component {
                     </div>
 
                     <div className="description-paragraph-2">
-                        <p className="paragraph">
-                            Enter a list of ingredients in the dashboard to search possible recipes.
+                        <p className="about-paragraph">
+                            Enter a list of ingredients in the dashboard to search several possible recipes.
                         </p>
                         <img className="recipe-icon" src={RecipeIcon} alt="recipe-icon"/>
                     </div>
                 </div>
 
                 <div className="col-4 description">
-                    <p className="paragraph">
+                    <p className="about-paragraph">
                         Save your recipes to your own database and write your own comments or notes about that recipe!
                     </p>
                     <img className="database-icon" src={DataBaseIcon} alt="how-icon"/>
                 </div>
             </div>
 
-            <div class="arrow-wrapper">
-                <a class="arrow" role="link" aria-label="scroll down">
-                    <i onClick={this.scrollToMission} class="fa fa-arrow-circle-down smooth-container" aria-hidden="true"></i>
+            <div className="arrow-wrapper">
+                <a className="arrow" role="link" aria-label="scroll down">
+                    <i onClick={this.scrollToMission} className="fa fa-arrow-circle-down smooth-container" aria-hidden="true"></i>
                 </a>
             </div>
             <hr className="about-hr"/>

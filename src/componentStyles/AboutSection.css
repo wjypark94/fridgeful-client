@@ -11,6 +11,7 @@
   .about-h4{
       font-size: 60px;
       font-family: 'Amatic SC';
+      letter-spacing: 1.5px;
   }
 
   .about-row{
@@ -29,11 +30,7 @@
  h1{
      font-family: 'Amatic SC';
  }
- 
- .paragraph{
-    font-family: 'Amatic SC';
-    font-size: 25px;
- }
+
  
  .about-icon{
      width: 5%;
@@ -58,11 +55,17 @@
 
  .fa-arrow-circle-down {
     color: grey;
-    margin-top: 40px;
+    margin-top: 55px;
     font-size: 2.7em;
   }
 
   .about-hr{
       width: 60%;
-      margin-top: 45px;
+      margin-top: 40px;
+  }
+
+  .about-paragraph{
+      font-family: 'Amatic SC';
+      font-size: 22px;
+      letter-spacing: 1.5px;
   }

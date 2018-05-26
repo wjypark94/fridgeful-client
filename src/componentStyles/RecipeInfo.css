@@ -5,6 +5,7 @@
 .recipe-title{
     text-align: center;
     color: black;
+    letter-spacing: 2.0px;
 }
 
 .recipe-text{
@@ -36,11 +37,13 @@
     cursor: pointer;
     width: 100%;
     text-align: left;
-    font-size: 17px;
+    font-size: 24px;
     position: relative;
-    margin-bottom: 7px;
+    margin-bottom: 10px;
     border-radius: 20px;
     box-shadow: 0 0 5px black;
+    font-family: 'Amatic SC';
+    letter-spacing: 2.0px;
   }
   .btn:after {
     color:tan;
@@ -69,6 +72,10 @@
     color: tan;
     margin-right: 50px;
     box-shadow: 0 0 5px black;
+    font-family: 'Amatic SC';
+    letter-spacing: 2.0px;
+    font-size: 20px;
+
 }
 
 .delete-btn:hover,
@@ -100,26 +107,29 @@
 
 .recipe-content{
     font-family: 'Amatic SC';
-    font-size: 30px;
+    font-size: 22px;
     padding-left: 250px;
+    letter-spacing: 1px;
 }
 
 .edit-form-title{
     font-family: 'Amatic SC';
     margin-top: 60px;
     font-size: 25px;
+    letter-spacing: 1.5px;
 }
 
 #submit-edit{
     font-family: 'Amatic SC';
     margin-bottom: 25px;
-    font-size: 25px;
+    font-size: 20px;
     background-color: #333333;
     width: 130px;
     padding: 5px;
     box-shadow: 0 0 5px black;
     color: tan;
     border-radius: 5px;
+    letter-spacing: 1.5px;
 }
 
 /******RESPONSIVE DESIGN CSS****/

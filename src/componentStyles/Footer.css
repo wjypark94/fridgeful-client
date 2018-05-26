@@ -1,7 +1,8 @@
 footer{
     background-color: #3D3D3D;
     width: 100%;
-    padding: 3px 6px;
+    padding: .2px 6px;
+    height: 100%;
 }
 
 .contacts-info{
@@ -24,13 +25,13 @@ footer{
 
 .contacts-info span{
     color: #d8d8d8;
-    font-size: 2em;
+    font-size: 2.2em;
 }
 
 .copyright{
     text-align: center;
     color: #d8d8d8;
-    margin-top: 45px;
+    margin-top: 30px;
     font-family: 'Amatic SC';
     letter-spacing: 3px;
     font-size: 20px;
@@ -47,10 +48,10 @@ footer{
 .footer-title h4{
     float: none;
     color: #6B6B6B;
-    line-height: 1.5;
+    line-height: 0.5;
     letter-spacing: 2px;
     font-family: 'Amatic SC';
-    
+    padding-top: 10px;
 }
 
 .footer-title img{

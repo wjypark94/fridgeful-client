@@ -3,8 +3,7 @@
     height: 100%;
     text-align: center;
     padding-top: 80px;
-    padding-bottom: 45px;
-    
+    padding-bottom: 45px;    
 }
 
 
@@ -16,24 +15,55 @@
 .mission-h4{
     font-size: 60px;
     font-family: 'Amatic SC';
+    letter-spacing: 1.5px;
 }
 
 .col-5 {
     padding-top: 20px;
 }
 
-.paragraph{
-    font-family: 'Amatic SC';
-    font-size: 25px;
- }
  
  .fa-arrow-circle-up {
     color: grey;
     margin-top: 40px;
     font-size: 2.7em;
+   
   }
 
 .mission-hr{
     width: 40%;
-    margin-top: 30px;
+    margin-top: 80px;
+}
+
+.mission-paragraph-1{
+    font-family: 'Amatic SC';
+    font-size: 25px;
+    letter-spacing: 1.5px;
+    margin-top: 10px;
+ }
+
+
+.mission-paragraph-3{
+    font-size: 25px;
+    font-family: 'Amatic SC';
+    letter-spacing: 1.5px;
+    margin-top: 10px;
+}
+
+
+.mission-paragraph-2{
+    font-size: 20px;
+    font-family: 'IM Fell French Canon SC';
+    letter-spacing: 1.5px;
+    margin-top: 10px;
+
+}
+
+.mission-paragraph-4{
+    font-size: 25px;
+    font-family: 'Oswald';
+    letter-spacing: 1.5px;
+    margin-top: 10px;
+    padding-bottom: 25px;
+
 }
