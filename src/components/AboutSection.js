@@ -1,12 +1,19 @@
-import React from 'react';
+import React, {Component} from 'react';
 import '../componentStyles/AboutSection.css';
 import '../componentStyles/float-grid.css';
 import HowIcon from '../images/howitworks-icon.png';
 import DataBaseIcon from '../images/database-icon.png';
 import RecipeIcon from '../images/recipe-icon.png';
 import RegisterIcon from '../images/register-icon.png';
+import {animateScroll as scroll} from 'react-scroll';
 
-const AboutSection = (props) => {
+export default class AboutSection extends Component {
+
+    scrollToMission(){
+        scroll.scrollTo(2150);
+    }
+
+    render(){
     return (
         <div className="about-row">
             <div className="col-12">
@@ -42,8 +49,14 @@ const AboutSection = (props) => {
                     <img className="database-icon" src={DataBaseIcon} alt="how-icon"/>
                 </div>
             </div>
-        </div>
-    );
-};
 
-export default AboutSection;
+            <div class="arrow-wrapper">
+                <a class="arrow" role="link" aria-label="scroll down">
+                    <i onClick={this.scrollToMission} class="fa fa-arrow-circle-down smooth-container" aria-hidden="true"></i>
+                </a>
+            </div>
+
+        </div>
+        );
+    }
+};

@@ -54,3 +54,10 @@
     width: 25%;
     padding-top: 50px;
  }
+
+
+ .fa-arrow-circle-down {
+    color: grey;
+    margin-top: 40px;
+    font-size: 2.7em;
+  }
