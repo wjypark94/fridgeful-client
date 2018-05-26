@@ -5,7 +5,7 @@ import { animateScroll as scroll } from 'react-scroll';
 export default class Header extends Component {
 
     scrollToMain(){
-        scroll.scrollTo(1000);
+        scroll.scrollTo(950);
     }
 
     render(){

@@ -41,7 +41,6 @@ const AboutSection = (props) => {
                     </p>
                     <img className="database-icon" src={DataBaseIcon} alt="how-icon"/>
                 </div>
-
             </div>
         </div>
     );

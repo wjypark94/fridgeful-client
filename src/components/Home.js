@@ -8,7 +8,7 @@ import MenuItem from 'material-ui/MenuItem';
 import RegistrationForm from './sign-up-form';
 import { Link } from 'react-router-dom';
 import Footer from './Footer';
-
+import MissionStatement from './mission-statement';
 
 class Home extends Component{ 
     constructor(props){
@@ -48,6 +48,7 @@ class Home extends Component{
 
                 <div id="about-section" className="instructions-display">
                     <AboutSection/>
+                    <MissionStatement/>
                 </div>
                 
                 <div>
