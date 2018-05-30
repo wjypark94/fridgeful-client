@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import '../componentStyles/Search.css';
 import $ from 'jquery';
 import { addRecipe } from '../actions';
@@ -8,7 +8,22 @@ const APP_ID ="4ad3534f";
 const SEARCH_URL = "https://api.edamam.com/search";
 
 
-const Search = (props) => {
+function addNewRecipe(recipeTitle, img){
+    const userId = localStorage.getItem('userId');
+    const content = "Write any comments here please";
+    addRecipe(userId, recipeTitle, img, content);
+}
+
+
+export default class Search extends Component {
+
+    addNewRecipe(recipeTitle, img){
+        const userId = localStorage.getItem('userId');
+        const content = "Write any comments here yo!";
+        addRecipe(userId, recipeTitle, img, content);
+    }
+
+    render(){
     return (
         <div className="dashboard-display">
             <header className="row">
@@ -22,7 +37,8 @@ const Search = (props) => {
             <div id="js-results" className="row">
             </div>
         </div>
-    );
+        );
+    }
 };
 
 //get data from edamam api
@@ -110,10 +126,4 @@ $(searchForm);
 
 //post recipeRequest
 
-function addNewRecipe(recipeTitle, img){
-    const userId = localStorage.getItem('userId');
-    const content = "Write any comments here please";
-    addRecipe(userId, recipeTitle, img, content);
-}
 
-export default Search;
