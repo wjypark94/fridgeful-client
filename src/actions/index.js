@@ -36,7 +36,7 @@ export const loginUserSuccess = (userId, token) => ({
 });
 
 export const loginUser = (username, password) => dispatch => {
-  fetch(`${API_BASE_URL}/auth/login`, {
+  fetch(`${API_BASE_URL}/auth/`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -68,27 +68,85 @@ export const logoutUser = () => dispatch => {
 
 //Recipe Actions
 
-export const addRecipe = (userId, title, img, content) => {
-  $.ajax({
-      method: 'POST',
-      url: `${API_BASE_URL}/recipelist`,
-      data: JSON.stringify({
-          userId: localStorage.getItem('userId'),
-          title: title,
-          img: img,
-          content: content,
-      }),
-      contentType: 'application/json',
-      dataType: 'json',
-      success: result => {
-          console.log(result);
-      }
+
+export const addRecipe = (userId, title, img, content ) => {
+  fetch(`${API_BASE_URL}/recipelist/`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${localStorage.getItem('authToken')}`
+    },
+    body: JSON.stringify({ userId, title, img, content}),
   })
+  .then(res => res.json())
+  //.then(recipes => {
+    //dispatch(fetchRecipesSuccess(recipes))
+  // })
+
+  console.log('success this action is working')
+  //.catch(error => console.log(error))
 }
 
 
-//GET RECIPE ENTRIES
 export const getRecipeEntries = (callbackFn) => {
+  fetch(`${API_BASE_URL}/recipelist/user/${localStorage.getItem('userId')}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${localStorage.getItem('authToken')}`
+    }
+  })
+  .then(res => res.json())
+  //console.log('this action is working i think!')
+  .then(recipes => {
+    console.log(recipes);
+    callbackFn(recipes);
+    //dispatch(fetchRecipesSuccess(recipes))
+  })
+  //.catch(error => console.log(error))
+}
+
+export const updateRecipeRequest = (id, title, content) => {
+  fetch(`${API_BASE_URL}/recipelist/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${localStorage.getItem('authToken')}`
+    },
+    body: JSON.stringify({id, title, content}),
+  })
+  window.location = "/recipes-page";
+  //.then(res => res.json())
+  console.log('edit action is working!');
+}
+
+
+//delete recipe entry
+
+
+export const deleteRecipeEntries = (data) => {
+  for (var i = 0; i < data.recipe.length; i++) {
+    $('.delete-btn').on('click', function(event) {
+      let recipeId = $(this).attr('id');
+
+      //console.log(recipeId);
+      $.ajax({
+        url: `${API_BASE_URL}/recipelist/${recipeId}`,
+        type: 'DELETE',
+        dataType: 'json',
+        contentType: 'application/json',
+
+        success: data => {
+          console.log("it worked!")
+                  window.location = 'recipes-page';
+        }
+      });
+    });
+  }
+}
+
+//GET RECIPE ENTRIES
+/*export const getRecipeEntries = (callbackFn) => {
   $.ajax({
     url: `${API_BASE_URL}/recipelist/user/${localStorage.getItem('userId')}`,
     type: 'GET',
@@ -97,7 +155,7 @@ export const getRecipeEntries = (callbackFn) => {
     success: data => {
       if(data) {
         let results = data;
-       //console.log('we are getting the data!')
+       console.log('we are getting the data!')
         //console.log(results);
         callbackFn(results);
        //console.log(data.recipe);     
@@ -105,7 +163,10 @@ export const getRecipeEntries = (callbackFn) => {
     }
   });
 }
+*/
 
+
+/*
 export const updateRecipeRequest = (id, title, content) => {
   $.ajax({
       method: 'PUT',
@@ -129,25 +190,26 @@ export const updateRecipeRequest = (id, title, content) => {
       }        
   });
 }
-//delete recipe entry
+*/
 
-export const deleteRecipeEntries = (data) => {
-  for (var i = 0; i < data.recipe.length; i++) {
-    $('.delete-btn').on('click', function(event) {
-      let recipeId = $(this).attr('id');
 
-      //console.log(recipeId);
-      $.ajax({
-        url: `${API_BASE_URL}/recipelist/${recipeId}`,
-        type: 'DELETE',
-        dataType: 'json',
-        contentType: 'application/json',
-
-        success: data => {
-          console.log("it worked!")
-                  window.location = 'recipes-page';
-        }
-      });
-    });
-  }
+/*
+export const addRecipe = (userId, title, img, content ) => {
+  $.ajax({
+      method: 'POST',
+      url: `${API_BASE_URL}/recipelist`,
+      data: JSON.stringify({
+          userId: localStorage.getItem('userId'),
+          title: title,
+          img: img,
+          content: content,
+      }),
+      contentType: 'application/json',
+      dataType: 'json',
+      success: result => {
+          console.log(result);
+      }
+  })
 }
+
+*/

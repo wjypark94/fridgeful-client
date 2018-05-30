@@ -68,7 +68,7 @@ class RegistrationForm extends Component {
             <br/>
             <TextField name="username" type="text" hintText="Username" required={true}/><br />
             <TextField name="password" type="password" hintText="Password" required={true}/>
-            <div class="register-form" style={{ textAlign: 'right', margin: '24px -24px -24px -24px'}}>
+            <div className="register-form" style={{ textAlign: 'right', margin: '24px -24px -24px -24px'}}>
               {actions}
             </div>
           </form>
