@@ -7,21 +7,13 @@ const API_KEY = "05657dfe9f118702432a2379f889bdf2";
 const APP_ID ="4ad3534f";
 const SEARCH_URL = "https://api.edamam.com/search";
 
-
 function addNewRecipe(recipeTitle, img){
     const userId = localStorage.getItem('userId');
     const content = "Write any comments here please";
     addRecipe(userId, recipeTitle, img, content);
 }
 
-
 export default class Search extends Component {
-
-    addNewRecipe(recipeTitle, img){
-        const userId = localStorage.getItem('userId');
-        const content = "Write any comments here yo!";
-        addRecipe(userId, recipeTitle, img, content);
-    }
 
     render(){
     return (
@@ -30,8 +22,11 @@ export default class Search extends Component {
                 <h1 className="search-logo">Fridgeful Dashboard</h1>
                
             </header>
-            <form action="#" className="recipes-form" id="recipes-form">
-                <input type="text" placeholder="Enter ingredients.." aria-label="input" className="recipe-query" id="recipe-query"/>
+            <form action="#" className="recipes-form" id="recipes-form" onSubmit={(e) => {
+                const recipequery = e.target.recipequery.value;
+                console.log('this is the recipe query: ' + recipequery);
+            }}>
+                <input type="text" placeholder="Enter ingredients.." aria-label="input" className="recipequery" id="recipequery"/>
                 <button type="submit" aria-label="search class" className="submit-button"> Search </button>
             </form>
             <div id="js-results" className="row">
@@ -51,7 +46,7 @@ function getDataFromRecipeApi() {
             app_id: APP_ID,
             app_key: API_KEY,
             from: 0,
-            to: 6
+            to: 12
           },
           dataType: 'json',
           type: 'GET',
@@ -66,13 +61,13 @@ function getDataFromRecipeApi() {
                   }
                   $('#js-results').html(hitsHtml);
                   $('.save-button').on('click', function(e){
-                      console.log('Recipe saved!!!');
+                      //console.log('Recipe saved!!!');
                       
                       var btn = e.target || e.srcElement;
                       const recipeTitle = btn.id;
                       const img = btn.getAttribute('data-imgurl');
-                      console.log(btn.id);
-                      console.log(img);
+                      //console.log(btn.id);
+                      //console.log(img);
                       addNewRecipe(recipeTitle, img);
                   })
                   
@@ -83,7 +78,7 @@ function getDataFromRecipeApi() {
           }
         })
   };
-
+  
 //display results from edamam api
   function displayResults(result){
       return `
@@ -113,6 +108,7 @@ function getDataFromRecipeApi() {
       `
   }
 
+
   function searchForm() {
     $('.recipes-form').submit(function (event) {
         event.preventDefault();
@@ -124,6 +120,6 @@ function getDataFromRecipeApi() {
 
 $(searchForm);
 
-//post recipeRequest
+
 
 

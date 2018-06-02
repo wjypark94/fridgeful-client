@@ -65,6 +65,7 @@ export const logoutUser = () => dispatch => {
   window.location = '/'
 }
 
+//API CALL
 
 //Recipe Actions
 
