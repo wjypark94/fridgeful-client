@@ -38,7 +38,7 @@ export default class Search extends Component {
 
 //get data from edamam api
 function getDataFromRecipeApi() {
-    let input = $('#recipe-query').val();
+    let input = $('#recipequery').val();
       $.ajax({
           url: SEARCH_URL,
           data: {
