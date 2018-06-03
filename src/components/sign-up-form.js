@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import '../componentStyles/sign-up-form.css';
-
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
