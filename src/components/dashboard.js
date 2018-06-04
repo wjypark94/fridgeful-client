@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import { Link } from 'react-router-dom';
-
 import '../componentStyles/dashboard.css';
 import { connect } from 'react-redux';
 import { logoutUser } from '../actions';
