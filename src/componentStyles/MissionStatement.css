@@ -67,3 +67,20 @@
     padding-bottom: 25px;
 
 }
+
+@media screen and (min-width: 670px) {
+    .mission-h4{
+        font-size: 60px;
+        font-family: 'Amatic SC';
+        letter-spacing: 1.5px;
+    }
+}
+
+@media screen and (min-width: 430px) {
+    .mission-h4{
+        font-size: 60px;
+        font-family: 'Amatic SC';
+        letter-spacing: 1.5px;
+    }
+}
+
