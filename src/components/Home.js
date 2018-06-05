@@ -10,7 +10,8 @@ import { Link } from 'react-router-dom';
 import Footer from './Footer';
 import MissionStatement from './mission-statement';
 
-class Home extends Component{ 
+
+export default class Home extends Component{ 
     constructor(props){
         super(props);
         this.state = {
@@ -42,8 +43,7 @@ class Home extends Component{
 
                       <MenuItem containerElement={<Link to="/login-form" />} id="login">Log In</MenuItem>
                       <RegistrationForm/>
-                  </Drawer>
-                  
+                  </Drawer>      
                 </div>
 
                 <div id="about-section" className="instructions-display">
@@ -59,4 +59,3 @@ class Home extends Component{
     }
 }
 
-export default Home;

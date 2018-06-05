@@ -9,6 +9,11 @@ Fridgeful is a recipe app that goes above and beyond a simple food app. The app 
 You can find the live demo of TrekCheck at:</br>
 https://fridgeful.netlify.com
 
+## Screenshots
+Home Display Page
+<img src="./src/images/fridgeful-readme1.png">
+
+
 ## Technology
 
 Front End
