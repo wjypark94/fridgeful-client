@@ -132,7 +132,7 @@
     letter-spacing: 1.5px;
 }
 
-/******RESPONSIVE DESIGN CSS****/
+/******RESPONSIVE DESIGN FOR RECIPE RESULTS****/
 
 @media screen and (max-width: 645px){
   .delete-btn,
@@ -153,4 +153,282 @@
   }
 
 }
+
+@media screen and (max-width: 645px){
+    .delete-btn,
+    .edit-btn {
+        margin-bottom: 5px;
+        position: relative;
+        float: right;
+        bottom: -5px;
+        padding: 5px;
+        width: 100px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 5px;
+        background-color: #333333;
+        color: tan;
+        margin-right: 50px;
+        box-shadow: 0 0 5px black;
+    }
+  
+  }
+
+  @media screen and (min-width: 460px){
+    .delete-btn,
+    .edit-btn {
+        margin-bottom: 5px;
+        position: relative;
+        float: right;
+        bottom: -5px;
+        padding: 5px;
+        width: 70px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        border-radius: 5px;
+        background-color: #333333;
+        color: tan;
+        margin-right: 30px;
+        box-shadow: 0 0 5px black;
+    }
+  
+  }
+
+  @media screen and (min-width: 420px){
+    .delete-btn,
+    .edit-btn {
+        margin-bottom: 5px;
+        position: relative;
+        float: right;
+        bottom: -5px;
+        padding: 5px;
+        width: 53px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        border-radius: 5px;
+        background-color: #333333;
+        color: tan;
+        margin-right: 30px;
+        box-shadow: 0 0 5px black;
+    }
+  
+  }
+  
+  @media screen and (min-width: 400px){
+    .delete-btn,
+    .edit-btn {
+        margin-bottom: 5px;
+        position: relative;
+        float: right;
+        bottom: -5px;
+        padding: 5px;
+        width: 53px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        border-radius: 5px;
+        background-color: #333333;
+        color: tan;
+        margin-right: 30px;
+        box-shadow: 0 0 5px black;
+    }
+  
+  }
+  
+
+  @media screen and (max-width: 398px){
+    .delete-btn,
+    .edit-btn {
+        margin-bottom: 5px;
+        position: relative;
+        float: right;
+        bottom: -5px;
+        padding: 5px;
+        width: 70px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        border-radius: 5px;
+        background-color: #333333;
+        color: tan;
+        margin-right: 40px;
+        box-shadow: 0 0 5px black;
+    }
+  
+  }
+
+  @media screen and (max-width: 313px){
+    .delete-btn,
+    .edit-btn {
+        margin-bottom: 5px;
+        position: relative;
+        float: right;
+        bottom: -5px;
+        padding: 5px;
+        width: 50px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        border-radius: 5px;
+        background-color: #333333;
+        color: tan;
+        margin-right: 40px;
+        box-shadow: 0 0 5px black;
+    }
+  
+  }
+  
+  @media screen and (max-width: 290px){
+    .delete-btn,
+    .edit-btn {
+        margin-bottom: 5px;
+        position: relative;
+        float: right;
+        bottom: -5px;
+        padding: 5px;
+        width: 55px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        border-radius: 5px;
+        background-color: #333333;
+        color: tan;
+        margin-right: 20px;
+        box-shadow: 0 0 5px black;
+    }
+  
+  }
+
+@media screen and (max-width: 200px){
+    .recipe-content{
+        font-family: 'Amatic SC';
+        font-size: 20px;
+        padding-left: 250px;
+        letter-spacing: 1px;
+    }
+    
+  }
+
+  @media screen and (max-width: 500px){
+    .recipe-content{
+        font-family: 'Amatic SC';
+        font-size: 16px;
+        padding-left: 180px;
+        letter-spacing: 1px;
+    }
+  }
+  
+
+@media screen and (max-width: 10px){
+    .recipe-content{
+        font-family: 'Amatic SC';
+        font-size: 30px;
+        padding-left: 200px;
+        letter-spacing: 1px;
+    }
+  }
+
+  
+  @media screen and (min-width: 381px){
+    .recipe-image {
+        height: 150px;
+        width: auto;
+        float: left;
+    }
+  }
+  
+  @media screen and (min-width: 500px){
+    .recipe-image {
+        height: 200px;
+        width: auto;
+        float: left;
+    }
+  }
+
+  @media screen and (max-width: 388px){
+    .recipe-image {
+        height: 165px;
+        width: auto;
+        float: left;
+    }
+  }
+
+
+  @media screen and (max-width: 626px){
+    .btn {
+        display: block;
+        border: none;
+        outline: 0;
+        color: tan;
+        background-color: #333333;
+        cursor: pointer;
+        width: 100%;
+        text-align: left;
+        font-size: 18px;
+        position: relative;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        box-shadow: 0 0 5px black;
+        font-family: 'Amatic SC';
+        letter-spacing: 2.0px;
+      }
+  }
+
+  @media screen and (max-width: 517px){
+    .btn {
+        display: block;
+        border: none;
+        outline: 0;
+        color: tan;
+        background-color: #333333;
+        cursor: pointer;
+        width: 130%;
+        text-align: left;
+        font-size: 19px;
+        position: relative;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        box-shadow: 0 0 5px black;
+        font-family: 'Amatic SC';
+        letter-spacing: 2.0px;
+      }
+  }
+
+
+  @media screen and (max-width: 482px){
+    .btn {
+        display: block;
+        border: none;
+        outline: 0;
+        color: tan;
+        background-color: #333333;
+        cursor: pointer;
+        width: 120%;
+        text-align: left;
+        font-size: 18px;
+        position: relative;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        box-shadow: 0 0 5px black;
+        font-family: 'Amatic SC';
+        letter-spacing: 2.0px;
+      }
+  }
+
+  @media screen and (max-width: 430px){
+    .btn {
+        display: block;
+        border: none;
+        outline: 0;
+        color: tan;
+        background-color: #333333;
+        cursor: pointer;
+        width: 130%;
+        text-align: left;
+        font-size: 16px;
+        position: relative;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        box-shadow: 0 0 5px black;
+        font-family: 'Amatic SC';
+        letter-spacing: 2.0px;
+      }
+  }
+
 

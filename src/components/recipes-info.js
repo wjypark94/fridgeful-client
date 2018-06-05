@@ -22,11 +22,13 @@ class RecipeInfo extends Component {
 //GET RECIPE ENTRIES
 
 function displayRecipeEntries(data) {
+    console.log(data);
     for (var i = 0; i < data.recipe.length; i++){
         $('.recipe-results').append(`
         <div class="col-8" id="${data.recipe[i].id}">
         <button class="btn row">${data.recipe[i].title}</button>
           <div class="acd-content col-12">
+
           <img class="recipe-image" src="${data.recipe[i].img}">
           <p class="recipe-content">${data.recipe[i].content}</p>
           <button id="${data.recipe[i].id}" class="delete-btn">Delete</button><button id="${data.recipe[i].id}" class="edit-btn">Edit</button>
