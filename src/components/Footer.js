@@ -2,10 +2,12 @@ import React from 'react';
 import FontAwesome from 'react-fontawesome';
 import '../componentStyles/Footer.css';
 import FridgeIcon from '../images/fridge-icon.png';
+import Fade from 'react-reveal/Fade';
 
 export default function Footer(){
     return(
         <footer>
+            <Fade bottom>
             <div className="footer-title">
             <img src={FridgeIcon} alt="icon"/>
             <h4 className="title-app">Fridgeful</h4>
@@ -35,6 +37,7 @@ export default function Footer(){
                 <FontAwesome name="copyright"/>
                 <span>2018</span> William Park
             </p>
+            </Fade>
         </footer>
     )
 }

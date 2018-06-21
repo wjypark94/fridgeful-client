@@ -9,7 +9,7 @@ import RegistrationForm from './sign-up-form';
 import { Link } from 'react-router-dom';
 import Footer from './Footer';
 import MissionStatement from './mission-statement';
-
+import Fade from 'react-reveal/Fade';
 
 export default class Home extends Component{ 
     constructor(props){
@@ -24,6 +24,7 @@ export default class Home extends Component{
     render(){
         return (
             <div>
+                <Fade>
                 <div className="main-home-display">
                 <AppBar
                       iconClassNameRight="muidocs-icon-navigation-expand-more"
@@ -54,6 +55,7 @@ export default class Home extends Component{
                 <div>
                     <Footer/>
                 </div>
+                </Fade>
             </div>
         );
     }

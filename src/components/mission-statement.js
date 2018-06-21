@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import MissionIcon from '../images/mission-icon.png';
 import '../componentStyles/MissionStatement.css';
 import { animateScroll as scroll } from 'react-scroll';
+import Fade from 'react-reveal/Fade';
+import Pulse from 'react-reveal/Pulse';
 
 
 export default class MissionStatement extends Component {
@@ -15,9 +17,13 @@ export default class MissionStatement extends Component {
         <div className="mission-row">
             <div className="col-12">
                 <div className="mission-text">
+                    <Fade left>
                     <h4 className="mission-h4"> MISSION STATEMENT <img className="about-icon" src={MissionIcon} alt="how-icon"/> </h4>
+                    </Fade>
                 </div>
 
+                <Fade>
+                <Pulse>
                 <div className="col-5 description">
                     <div className="description-paragraph-1">
                         <p className="mission-paragraph-1">
@@ -39,11 +45,15 @@ export default class MissionStatement extends Component {
                     For so long, people thought Fridgeful was just about making food. But really, we're about saving food. Roughly 40% of the food in the United States is never eaten, amounting to $165 billion a year in food waste. Most of the waste comes in the home with families throwing out approximately 25% of the food and beverages they buy. 
                     </p>
                 </div>
+                </Pulse>
+                </Fade>
 
                   <div className="col-5 description">
+                    <Fade bottom>
                     <p className="mission-paragraph-4">
                     Food is simply too good to waste. Let's start with Fridgeful. 
                     </p>
+                    </Fade>
                 </div>
             </div>
 

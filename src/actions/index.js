@@ -100,7 +100,7 @@ export const getRecipeEntries = (callbackFn) => {
   .then(res => res.json())
   //console.log('this action is working i think!')
   .then(recipes => {
-    console.log(recipes);
+    //console.log(recipes);
     callbackFn(recipes);
     //dispatch(fetchRecipesSuccess(recipes))
   })

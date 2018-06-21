@@ -6,6 +6,9 @@ import DataBaseIcon from '../images/database-icon.png';
 import RecipeIcon from '../images/recipe-icon.png';
 import RegisterIcon from '../images/register-icon.png';
 import {animateScroll as scroll} from 'react-scroll';
+import Fade from 'react-reveal/Fade';
+import Pulse from 'react-reveal/Pulse';
+
 
 export default class AboutSection extends Component {
 
@@ -16,9 +19,13 @@ export default class AboutSection extends Component {
     render(){
     return (
         <div className="about-row">
+            <Fade>
+            <Pulse>
             <div className="col-12">
                 <div className="about-text">
+                    <Fade left>
                     <h4 className="about-h4"> HOW IT WORKS <img className="about-icon" src={HowIcon} alt="how-icon"/> </h4>
+                    </Fade>
                 </div>
 
                 <div className="col-4 description">
@@ -56,6 +63,8 @@ export default class AboutSection extends Component {
                 </a>
             </div>
             <hr className="about-hr"/>
+            </Pulse>
+            </Fade>
         </div>
         );
     }

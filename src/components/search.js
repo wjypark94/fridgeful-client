@@ -52,7 +52,7 @@ function getDataFromRecipeApi() {
           type: 'GET',
           success: function (data) {
               try {
-                  console.log(data);
+                  //console.log(data);
                   var hitsHtml = "";
                   for (var i = 0; i < data.hits.length; i++){
                       var eachHit = data.hits[i];

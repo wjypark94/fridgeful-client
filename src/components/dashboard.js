@@ -7,7 +7,7 @@ import '../componentStyles/dashboard.css';
 import { connect } from 'react-redux';
 import { logoutUser } from '../actions';
 import Search from './search';
-
+import Fade from 'react-reveal/Fade';
 
 class Dashboard extends Component {
     constructor(props) {
@@ -23,6 +23,7 @@ class Dashboard extends Component {
     render() {
         return (
             <div>
+                <Fade bottom>
                 <div className="main-display">
                 <AppBar
                       iconClassNameRight="muidocs-icon-navigation-expand-more"
@@ -47,6 +48,7 @@ class Dashboard extends Component {
                   </Drawer>
                   
                 </div>
+                </Fade>
             </div>
         );
     }

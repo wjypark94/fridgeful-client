@@ -22,7 +22,7 @@ class RecipeInfo extends Component {
 //GET RECIPE ENTRIES
 
 function displayRecipeEntries(data) {
-    console.log(data);
+    //console.log(data);
     for (var i = 0; i < data.recipe.length; i++){
         $('.recipe-results').append(`
         <div class="col-8" id="${data.recipe[i].id}">
