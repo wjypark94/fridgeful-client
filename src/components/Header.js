@@ -14,6 +14,7 @@ export default class Header extends Component {
                 <div className="js-start-display" id="start-page">
                     <header className="row">
                         <h1 className="logo-h1">Fridgeful</h1>
+                        <p className="api-info">Powered by Edamam API</p>
                         <p className="header-p">Find recipes based on what's in your fridge!</p>
                     </header>
                 </div>

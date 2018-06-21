@@ -50,6 +50,7 @@ h1{
     padding-bottom: 10px;
     color: black;
     letter-spacing: 1.0px;
+    margin-top: -10px;
 }
 
 .learn-more-button{
@@ -70,6 +71,13 @@ h1{
     color: black;
     font-family: 'Amatic SC';
     letter-spacing: 1.0px;
+}
+
+.api-info{
+    color: steelblue;
+    font-family: 'Homenaje';
+    font-size: 16.5px;
+    margin-top: -20px;
 }
 
 /*** RESPONSIVE DESIGN FOR HEADER CONTAINER***/
