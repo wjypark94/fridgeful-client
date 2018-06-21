@@ -108,6 +108,7 @@ export const getRecipeEntries = (callbackFn) => {
 }
 
 export const updateRecipeRequest = (id, title, content) => {
+  let onSuccess = window.location = "/recipes-page";
   fetch(`${API_BASE_URL}/recipelist/${id}`, {
     method: 'PUT',
     headers: {
@@ -116,10 +117,11 @@ export const updateRecipeRequest = (id, title, content) => {
     },
     body: JSON.stringify({id, title, content}),
     dataType: 'json',
+    success: onSuccess,
   })
   //.then(res => res.json())
   console.log('edit action is working!');
-  window.location = "/recipes-page";
+  //window.location = "/recipes-page";
 }
 
 
