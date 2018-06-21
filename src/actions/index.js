@@ -115,10 +115,11 @@ export const updateRecipeRequest = (id, title, content) => {
       'Authorization': `Bearer ${localStorage.getItem('authToken')}`
     },
     body: JSON.stringify({id, title, content}),
+    dataType: 'json',
   })
-  window.location = "/recipes-page";
   //.then(res => res.json())
   console.log('edit action is working!');
+  window.location = "/recipes-page";
 }
 
 
@@ -139,7 +140,7 @@ export const deleteRecipeEntries = (data) => {
 
         success: data => {
           console.log("it worked!")
-                  window.location = 'recipes-page';
+          window.location = 'recipes-page';
         }
       });
     });
