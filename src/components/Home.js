@@ -24,6 +24,7 @@ export default class Home extends Component{
     render(){
         return (
             <div>
+   
                 <Fade>
                 <div className="main-home-display">
                 <AppBar

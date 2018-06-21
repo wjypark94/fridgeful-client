@@ -116,7 +116,7 @@ export const updateRecipeRequest = (id, title, content) => {
     },
     body: JSON.stringify({id, title, content}),
   })
-  window.location = "/recipes-page";
+  //window.location = "/recipes-page";
   //.then(res => res.json())
   console.log('edit action is working!');
 }

@@ -73,7 +73,7 @@ $(document).on('click', '#submit-edit', function (e) {
     const recipeContent = $("#" + currentId + "-comment").val().trim();
     console.log(recipeContent);
     //console.log('this is the new content: '+ recipeContent);
-    console.log(currentId);
+    //console.log(currentId);
     updateRecipeRequest(currentId, currentTitle, recipeContent);
    });
 
