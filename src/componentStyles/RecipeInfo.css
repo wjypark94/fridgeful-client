@@ -78,8 +78,31 @@
 
 }
 
+.refresh-btn{
+    margin-bottom: 5px;
+    position: relative;
+    float: right;
+    bottom: -25px;
+    padding: 5px;
+    width: 150px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    background-color: #333333;
+    color: tan;
+    margin-right: 50px;
+    box-shadow: 0 0 5px black;
+    font-family: 'Amatic SC';
+    letter-spacing: 2.0px;
+    font-size: 20px;
+
+}
+
+
+
 .delete-btn:hover,
-.edit-btn:hover {
+.edit-btn:hover,
+.refresh-btn:hover, {
   color: gold;
 }
 
@@ -136,7 +159,8 @@
 
 @media screen and (max-width: 645px){
   .delete-btn,
-  .edit-btn {
+  .edit-btn,
+  .refresh-btn {
       margin-bottom: 5px;
       position: relative;
       float: right;
@@ -156,7 +180,8 @@
 
 @media screen and (max-width: 645px){
     .delete-btn,
-    .edit-btn {
+    .edit-btn,
+    .refresh-btn {
         margin-bottom: 5px;
         position: relative;
         float: right;
@@ -176,7 +201,8 @@
 
   @media screen and (min-width: 460px){
     .delete-btn,
-    .edit-btn {
+    .edit-btn,
+    .refresh-btn {
         margin-bottom: 5px;
         position: relative;
         float: right;
@@ -196,7 +222,8 @@
 
   @media screen and (min-width: 420px){
     .delete-btn,
-    .edit-btn {
+    .edit-btn,
+    .refresh-btn {
         margin-bottom: 5px;
         position: relative;
         float: right;
@@ -216,7 +243,8 @@
   
   @media screen and (min-width: 400px){
     .delete-btn,
-    .edit-btn {
+    .edit-btn,
+    .refresh-btn {
         margin-bottom: 5px;
         position: relative;
         float: right;
@@ -237,7 +265,8 @@
 
   @media screen and (max-width: 398px){
     .delete-btn,
-    .edit-btn {
+    .edit-btn,
+    .refresh-btn {
         margin-bottom: 5px;
         position: relative;
         float: right;
@@ -257,7 +286,8 @@
 
   @media screen and (max-width: 313px){
     .delete-btn,
-    .edit-btn {
+    .edit-btn,
+    .refresh-btn {
         margin-bottom: 5px;
         position: relative;
         float: right;
@@ -277,7 +307,8 @@
   
   @media screen and (max-width: 290px){
     .delete-btn,
-    .edit-btn {
+    .edit-btn,
+    .refresh-btn {
         margin-bottom: 5px;
         position: relative;
         float: right;

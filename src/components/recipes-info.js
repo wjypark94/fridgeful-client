@@ -26,19 +26,25 @@ function displayRecipeEntries(data) {
     for (var i = 0; i < data.recipe.length; i++){
         $('.recipe-results').append(`
         <div class="col-8" id="${data.recipe[i].id}">
-        <button class="btn row">${data.recipe[i].title}</button>
-          <div class="acd-content col-12">
-
-          <img class="recipe-image" src="${data.recipe[i].img}">
-          <p class="recipe-content">${data.recipe[i].content}</p>
-          <button id="${data.recipe[i].id}" class="delete-btn">Delete</button><button id="${data.recipe[i].id}" class="edit-btn">Edit</button>
-  
-          </div>
-        <form id="${data.recipe[i].id}-edit" class="edit-form">
-          <h4 class="edit-form-title"> Any comments about this recipe? </h4>
-          <input type="text" class="edit-form-input" id="${data.recipe[i].id}-comment">
-          <button type="button" id="submit-edit" data-title="${data.recipe[i].title}" data-id="${data.recipe[i].id}" data-content="${data.recipe[i].content}"> Submit</button>
-        </form>
+          <button class="btn row">
+            ${data.recipe[i].title}
+          </button>
+            <div class="acd-content col-12">
+              <img class="recipe-image" src="${data.recipe[i].img}">
+              <p class="recipe-content">${data.recipe[i].content}</p>
+              <button class="refresh-btn"><i class="fa fa-refresh"></i></button>
+              <button id="${data.recipe[i].id}" class="delete-btn">Delete</button>
+              <button id="${data.recipe[i].id}" class="edit-btn">Edit</button>
+            </div>
+          <form id="${data.recipe[i].id}-edit" class="edit-form">
+            <h4 class="edit-form-title"> 
+              Any comments about this recipe? 
+            </h4>
+            <input type="text" class="edit-form-input" id="${data.recipe[i].id}-comment">
+            <button type="button" id="submit-edit" data-title="${data.recipe[i].title}" data-id="${data.recipe[i].id}" data-content="${data.recipe[i].content}"> 
+              Submit
+            </button>
+          </form>
         </div>
         `);
     }
@@ -66,6 +72,10 @@ function displayRecipeEntries(data) {
     $("#"+ currentId + "-edit").toggle();
    });
 
+   $(document).on('click', '.refresh-btn', function(event){
+     window.location = "/recipes-page"
+   })
+
 $(document).on('click', '#submit-edit', function (e) {
     var btn = e.target;
     let currentId = btn.getAttribute('data-id');
@@ -75,6 +85,7 @@ $(document).on('click', '#submit-edit', function (e) {
     //console.log('this is the new content: '+ recipeContent);
     //console.log(currentId);
     updateRecipeRequest(currentId, currentTitle, recipeContent);
+    $("#"+ currentId + "-edit").toggle();
    });
 
  //delete the recipe entries
