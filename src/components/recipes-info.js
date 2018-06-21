@@ -68,7 +68,7 @@ function displayRecipeEntries(data) {
     //window.location = '/edit-form';
     var btn = event.target;
     let currentId = btn.getAttribute('id');
-    console.log(currentId);
+    //console.log(currentId);
     $("#"+ currentId + "-edit").toggle();
    });
 
@@ -81,7 +81,7 @@ $(document).on('click', '#submit-edit', function (e) {
     let currentId = btn.getAttribute('data-id');
     let currentTitle = btn.getAttribute('date-title');
     const recipeContent = $("#" + currentId + "-comment").val().trim();
-    console.log(recipeContent);
+    //console.log(recipeContent);
     //console.log('this is the new content: '+ recipeContent);
     //console.log(currentId);
     updateRecipeRequest(currentId, currentTitle, recipeContent);
