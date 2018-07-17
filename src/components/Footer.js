@@ -14,13 +14,13 @@ export default function Footer(){
             </div>
 
             <div className="contacts-info">
-                <ul className="">
-                    <li className="">
+                <ul className>
+                    <li>
                         <a href="https://github.com/wjypark94" target="blank" name="github">
                             <FontAwesome name="github"/>
                         </a>
                     </li>
-                    <li className="contacts-info">
+                    <li>
                         <a href="https://www.linkedin.com/in/wjypark/" target="blank" name="linkedin">
                             <FontAwesome name="linkedin"/>
                         </a>
